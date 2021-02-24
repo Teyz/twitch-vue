@@ -20,25 +20,6 @@ export default {
       default: "normal",
     },
   },
-  mounted() {
-    this.bgGenerate();
-  },
-  methods: {
-    bgGenerate() {
-      let spaccing = 179;
-      const sectionWrapper = document.querySelector(".wrapperRoot");
-      for (let i = 0; i < 7; i++) {
-        let verticalDivider = document.createElement("div");
-        verticalDivider.classList.add("verticalDivider");
-        verticalDivider.style.left = spaccing + "px";
-        if (spaccing > 179) {
-          verticalDivider.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-        }
-        sectionWrapper.appendChild(verticalDivider);
-        spaccing += 179;
-      }
-    },
-  },
 };
 </script>
 
