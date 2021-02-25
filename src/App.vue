@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="nav" class="topnav">
+    <router-link to="/">Home</router-link>
+    <a href="#portfolio">Portfolio</a>
+    <router-link to="/experience">Experience</router-link>
+    <router-link to="/contact">Contact</router-link>
+    <svg viewBox="0 0 100 80" width="40" height="40" v-on:click="showMenu()">
+      <rect width="100" height="10" rx="4" fill="white"></rect>
+      <rect y="30" width="100" height="10" rx="4" fill="white"></rect>
+      <rect y="60" width="100" height="10" rx="4" fill="white"></rect>
+    </svg>
   </div>
-  <router-view/>
+  <router-view />
 </template>
+
+<script>
+export default {
+  name: "App",
+  methods: {
+    showMenu() {
+      let x = document.getElementById("nav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Favorit Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>

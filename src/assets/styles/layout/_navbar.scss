@@ -1,0 +1,61 @@
+#nav {
+  padding: 24px;
+  position: absolute;
+  right: 16px;
+  overflow: hidden;
+  z-index: 2;
+
+  a {
+    display: none;
+    font-weight: bold;
+    color: rgba($color: white, $alpha: 0.3);
+
+    &.router-link-exact-active {
+      color: white;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      padding: 8px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 6% !important;
+    position: fixed;
+  }
+}
+
+#nav a:not(:first-child) {
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    text-align: right;
+  }
+}
+#nav a.icon {
+  float: right;
+  display: flex;
+}
+
+#nav.responsive {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+}
+
+#nav.responsive a {
+  display: flex;
+  padding: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  svg {
+    display: none;
+  }
+}
