@@ -29,6 +29,7 @@ export default {
   padding: 24px;
   z-index: 1;
   height: 100vh;
+  position: relative;
 
   display: flex;
   align-items: center;

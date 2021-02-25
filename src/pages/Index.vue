@@ -46,7 +46,7 @@ export default {
   methods: {
     bgGenerate() {
       let spaccing = 179;
-      const sectionWrapper = document.querySelector(".wrapperRoot");
+      const sectionWrapper = document.querySelector("body");
       for (let i = 0; i < 7; i++) {
         let verticalDivider = document.createElement("div");
         verticalDivider.classList.add("verticalDivider");
