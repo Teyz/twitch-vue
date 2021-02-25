@@ -1,17 +1,19 @@
 <template>
-  <div class="portfolioItemRoot">
+  <div class="portfolioItemRoot" data-aos="fade-down-right">
     <img :src="image" alt="" />
     <div class="portfolioContent">
       <h2>{{ title }}</h2>
       <p>
         {{ text }}
       </p>
-      <router-link to="/brawks">Discover</router-link>
+      <router-link to="/brawks">Decouvrir</router-link>
     </div>
   </div>
 </template>
 
 <script>
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default {
   name: "PortfolioItem",
   props: {
@@ -31,6 +33,9 @@ export default {
       type: String,
       default: "",
     },
+  },
+  created() {
+    AOS.init();
   },
 };
 </script>

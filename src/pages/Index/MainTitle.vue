@@ -22,6 +22,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .mainTitleRoot {
+  margin-top: 64px;
   padding: 24px;
   display: flex;
   align-items: center;
