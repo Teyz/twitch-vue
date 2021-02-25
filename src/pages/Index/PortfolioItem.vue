@@ -1,12 +1,22 @@
 <template>
-  <div class="portfolioItemRoot" data-aos="fade-down-right">
+  <div v-if="animation" class="portfolioItemRoot" data-aos="fade-down-right">
     <img :src="image" alt="" />
     <div class="portfolioContent">
       <h2>{{ title }}</h2>
       <p>
         {{ text }}
       </p>
-      <router-link to="/brawks">Decouvrir</router-link>
+      <a :href="url" target="_blank">Decouvrir</a>
+    </div>
+  </div>
+  <div v-else class="portfolioItemRoot" data-aos="fade-down-left">
+    <img :src="image" alt="" />
+    <div class="portfolioContent">
+      <h2>{{ title }}</h2>
+      <p>
+        {{ text }}
+      </p>
+      <a :href="url" target="_blank">Decouvrir</a>
     </div>
   </div>
 </template>
@@ -32,6 +42,10 @@ export default {
     image: {
       type: String,
       default: "",
+    },
+    animation: {
+      type: Boolean,
+      default: false,
     },
   },
   created() {

@@ -1,5 +1,5 @@
 <template>
-  <section class="wrapperRoot">
+  <section class="wrapperRoot" :id="id">
     <h1 class="background-title" :id="size">
       {{ title }}
     </h1>
@@ -18,6 +18,10 @@ export default {
     size: {
       type: String,
       default: "normal",
+    },
+    id: {
+      type: String,
+      default: "",
     },
   },
 };

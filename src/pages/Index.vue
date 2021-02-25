@@ -4,27 +4,30 @@
       <MainTitle />
       <Stickers />
     </Wrapper>
-    <Wrapper title="AboutMe" size="small">
+    <Wrapper title="AboutMe" size="small" id="aboutme">
       <About />
     </Wrapper>
-    <Wrapper title="Portfolio" size="small">
+    <Wrapper title="Portfolio" size="small" id="portfolio">
       <PortfolioItem
+        animation
         title="creativete"
         image="/img/portfolio/creativete.png"
-        text="Création d'un site wordpress sur mesure pour Creativ ete"
+        text="Creation d'un site wordpress sur mesure pour Creativ ete"
+        url="https://creativete.rivp.fr/"
       />
     </Wrapper>
     <Wrapper title="Portfolio" size="small">
       <PortfolioItem
         title="brawks"
         image="/img/portfolio/brawks.png"
-        text="Création d'api et Bot pour le streamer Brawks"
-        url="/brawks"
+        text="Creation d'api et Bot pour le streamer Brawks"
+        url="brawks"
       />
     </Wrapper>
     <Wrapper title="Experience" size="medium">
       <ExperiencesList />
     </Wrapper>
+    <Wrapper title="Contact" size="regular"> </Wrapper>
   </section>
 </template>
 
