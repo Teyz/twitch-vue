@@ -6,7 +6,7 @@
       <p>
         {{ text }}
       </p>
-      <a :href="url">Discover</a>
+      <router-link to="/brawks">Discover</router-link>
     </div>
   </div>
 </template>

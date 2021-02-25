@@ -33,5 +33,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 </style>

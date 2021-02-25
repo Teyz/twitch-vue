@@ -45,7 +45,6 @@ export default {
         right: -20px;
         position: absolute;
         transform: rotate(90deg);
-        animation: scrollIndication 5s infinite;
       }
     }
   }

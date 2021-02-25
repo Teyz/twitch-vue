@@ -1,0 +1,16 @@
+#nav {
+  padding: 24px;
+  position: absolute;
+  right: 10%;
+  overflow: hidden;
+
+  a {
+    display: block;
+    font-weight: bold;
+    color: rgba($color: white, $alpha: 0.3);
+
+    &.router-link-exact-active {
+      color: white;
+    }
+  }
+}

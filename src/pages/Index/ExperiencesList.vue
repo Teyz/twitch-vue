@@ -1,5 +1,5 @@
 <template>
-  <div class="experiencesListRoot"></div>
+  <div class="experiencesList"></div>
 </template>
 
 <script>

@@ -4,6 +4,13 @@
       <MainTitle />
       <Stickers />
     </Wrapper>
+    <Wrapper title="AboutMe" size="small">
+      <PortfolioItem
+        title="creativete"
+        image="/img/portfolio/creativete.png"
+        text="Creation of a contest website for rivp."
+      />
+    </Wrapper>
     <Wrapper title="Portfolio" size="small">
       <PortfolioItem
         title="creativete"
@@ -16,20 +23,7 @@
         title="brawks"
         image="/img/portfolio/brawks.png"
         text="Web development for Brawks."
-      />
-    </Wrapper>
-    <Wrapper title="Portfolio" size="small">
-      <PortfolioItem
-        title="FortniteStats"
-        image="/img/portfolio/fortnite.jpg"
-        text="Twitter bot."
-      />
-    </Wrapper>
-    <Wrapper title="Portfolio" size="small">
-      <PortfolioItem
-        title="SixthMan"
-        image="/img/portfolio/5.jpg"
-        text="lorem ipsum"
+        url="/brawks"
       />
     </Wrapper>
     <Wrapper title="Experience" size="medium">
