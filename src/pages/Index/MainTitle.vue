@@ -52,6 +52,7 @@ export default {
 
   @media screen and (min-width: 1024px) {
     min-height: 75vh;
+    margin-top: 0 !important;
   }
   h1 {
     font-family: "Akira";

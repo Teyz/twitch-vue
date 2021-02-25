@@ -1,5 +1,5 @@
 <template>
-  <section class="textImageSectionRoot">
+  <section class="textImageSectionRoot" :class="{ reversImage: isReverse }">
     <div class="imageSection" data-aos="zoom-out-right" data-aos-delay="300">
       <img :src="image" alt="" />
     </div>
@@ -26,9 +26,9 @@ export default {
       type: String,
       default: "",
     },
-    position: {
-      type: String,
-      default: "left",
+    isReverse: {
+      type: Boolean,
+      default: false,
     },
   },
 };
@@ -47,9 +47,24 @@ export default {
   }
 
   @media screen and (min-width: 1024px) {
+    padding-bottom: 48px;
     flex-direction: row;
+
+    &.reversImage {
+      flex-direction: row-reverse;
+
+      .imageSection {
+        padding-left: 24px;
+      }
+
+      .textSection {
+        padding-right: 24px;
+        padding-left: 0;
+      }
+    }
+
     .imageSection {
-      padding: 8px;
+      padding-right: 24px;
       text-align: end;
       width: 100%;
       img {
@@ -57,8 +72,8 @@ export default {
       }
     }
     .textSection {
-      padding: 8px;
-      max-width: 30vw;
+      padding-left: 24px;
+      max-width: 40vw;
       text-align: left;
     }
   }

@@ -14,6 +14,15 @@
       Petite annee de perdition en 2019 avec un echec en Master informatique pour ensuite rebondir avec un mastere developpement web a l'ECV
       Digital Bordeaux."
     />
+    <TextImageSection
+      isReverse
+      image="img/about/CursusScolaire.png"
+      text="J'ai eu un parcours assez classique en commencant par l'optention
+      d'un BAC S spe SVT en 2016, puis d'un DUT Informatique en 2018 a l'Universite 
+      de Villetaneuse. Changement de cap en 2018 avec un Bachelor Chef de projet multimedia.
+      Petite annee de perdition en 2019 avec un echec en Master informatique pour ensuite rebondir avec un mastere developpement web a l'ECV
+      Digital Bordeaux."
+    />
   </div>
 </template>
 

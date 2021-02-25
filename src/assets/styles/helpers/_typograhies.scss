@@ -16,7 +16,7 @@
 
     color: transparent;
 
-    transform: rotate(180deg) translate(-7px, 5%);
+    transform: rotate(180deg) translate(-7px, 0%);
 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
@@ -35,10 +35,15 @@ a {
 
 #small {
   font-size: 95px !important;
-  transform: rotate(180deg) translate(-35px, -0%);
+  transform: rotate(180deg) translate(-35px, 0%);
 }
 
 #medium {
   font-size: 84px !important;
-  transform: rotate(180deg) translate(-40px, -4%);
+  transform: rotate(180deg) translate(-40px, 0%);
+}
+
+#regular {
+  font-size: 115px !important;
+  transform: rotate(180deg) translate(-25px, 0%);
 }
