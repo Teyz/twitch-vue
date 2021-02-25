@@ -26,9 +26,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .wrapperRoot {
-  padding: 24px;
   z-index: 1;
-  height: 100vh;
   position: relative;
 
   display: flex;
@@ -38,6 +36,7 @@ export default {
 
   @media screen and (min-width: 1024px) {
     flex-direction: row;
+    height: 100vh;
   }
 }
 </style>
