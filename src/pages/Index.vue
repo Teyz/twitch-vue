@@ -27,7 +27,9 @@
     <Wrapper title="Experience" size="medium">
       <ExperiencesList />
     </Wrapper>
-    <Wrapper title="Contact" size="regular"> </Wrapper>
+    <Wrapper title="Contact" size="regular">
+      <Contact />
+    </Wrapper>
   </section>
 </template>
 
@@ -37,9 +39,17 @@ import Stickers from "./Index/Stickers";
 import PortfolioItem from "./Index/PortfolioItem";
 import ExperiencesList from "./Index/ExperiencesList";
 import About from "./Index/About";
+import Contact from "./Index/Contact";
 export default {
   name: "Index",
-  components: { MainTitle, Stickers, PortfolioItem, ExperiencesList, About },
+  components: {
+    MainTitle,
+    Stickers,
+    PortfolioItem,
+    ExperiencesList,
+    About,
+    Contact,
+  },
 };
 </script>
 
