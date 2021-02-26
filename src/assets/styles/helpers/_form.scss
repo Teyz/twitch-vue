@@ -15,8 +15,10 @@ select {
   border: none;
   border-bottom: 1px solid white;
   color: white;
+  font-size: 22px !important;
   max-width: 140px;
   &:focus {
+    font-size: 22px !important;
     background-color: transparent i !important;
     border-bottom: 1px solid $purple;
     outline: none;
