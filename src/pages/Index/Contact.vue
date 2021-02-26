@@ -63,19 +63,25 @@ export default {
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
+            this.$toast.success("Email envoyé !", {
+              position: "top-right",
+            });
             this.resetForm();
           },
           (error) => {
             console.log("FAILED...", error);
             this.resetForm();
+            this.$toast.error("Une erreur est survenue", {
+              position: "top-right",
+            });
           }
         );
     },
-  },
-  resetForm() {
-    this.name = "";
-    this.email = "";
-    this.project = "";
+    resetForm() {
+      this.name = "";
+      this.email = "";
+      this.project = "";
+    },
   },
 };
 </script>
