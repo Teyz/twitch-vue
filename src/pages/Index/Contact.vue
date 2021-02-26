@@ -16,13 +16,13 @@
         <label for="email">Get in touch with me at</label>
         <input type="email" id="email" name="email" required v-model="email" />
       </div>
-      <div class="formRow">
+      <div class="formRow" data-aos="fade-right" data-aos-delay="300">
         <input type="checkbox" id="aggrement" name="aggrement" required />
         <label for="aggrement" class="checkbox-label"
           >I accept all terms and conditions</label
         >
       </div>
-      <div class="formRow">
+      <div class="formRow" data-aos="fade-left" data-aos-delay="400">
         <button type="submit">Send enquiry</button>
       </div>
     </form>

@@ -58,7 +58,7 @@ export default {
   a {
     @media screen and (min-width: 1024px) {
       position: absolute;
-      bottom: -70%;
+      bottom: -50%;
       left: 50%;
       transform: translateX(-50%);
     }
