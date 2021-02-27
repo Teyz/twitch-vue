@@ -1,10 +1,10 @@
 <template>
   <section class="body">
-    <Wrapper title="Home">
+    <Wrapper title="Home" id="home">
       <MainTitle />
       <Stickers />
     </Wrapper>
-    <Wrapper title="AboutMe" size="small" id="aboutme">
+    <Wrapper title="About Me" size="small" id="aboutme">
       <About />
     </Wrapper>
     <Wrapper title="Portfolio" size="small" id="portfolio">
@@ -16,7 +16,7 @@
         url="https://creativete.rivp.fr/"
       />
     </Wrapper>
-    <Wrapper title="Portfolio" size="small">
+    <Wrapper title="Portfolio" size="small" id="">
       <PortfolioItem
         title="brawks"
         image="/img/portfolio/brawks.png"
@@ -24,10 +24,10 @@
         url="brawks"
       />
     </Wrapper>
-    <Wrapper title="Experience" size="medium">
+    <Wrapper title="Experience" size="medium" id="experiences">
       <ExperiencesList />
     </Wrapper>
-    <Wrapper title="Contact" size="regular">
+    <Wrapper title="Contact" size="regular" id="contact">
       <Contact />
     </Wrapper>
   </section>

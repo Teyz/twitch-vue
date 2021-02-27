@@ -1,9 +1,9 @@
 <template>
   <section class="textSectionRoot" data-aos="zoom-out-down">
     <div class="inner">
-      <h2>
+      <h3>
         {{ title }}
-      </h2>
+      </h3>
       <p>
         {{ text }}
       </p>
@@ -41,8 +41,12 @@ export default {
   justify-content: center;
   align-items: center;
 
+  h3 {
+    font-family: "Akira";
+  }
+
   @media screen and (min-width: 1024px) {
-    h2 {
+    h3 {
       text-align: left;
     }
     p {
