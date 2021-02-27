@@ -29,37 +29,37 @@
           </p>
         </div>
         <div class="xp-description">
-          <h2 class="title-experience medium anime fromTop">
+          <h2 class="title-experience medium">
             <span class="stroke">Full stack</span> developper
-            <span class="title-company anime fromRight">
+            <span class="title-company">
               at Influa
             </span>
           </h2>
-          <p class="description-experience anime fromBottom">
+          <p class="description-experience">
             Integration: Bootstrap, HTML / CSS Wordpress: Premium Theme
             Modification (PHP)
           </p>
         </div>
         <div class="xp-description">
-          <h2 class="title-experience medium anime fromTop">
+          <h2 class="title-experience medium">
             <span class="stroke">EXPERT</span> Informatique
             <span class="title-company">
               at Ibbu
             </span>
           </h2>
-          <p class="description-experience anime fromBottom">
+          <p class="description-experience">
             IT expert for the Cdiscount & RS Components: Consulting and sales
             (Student employment)
           </p>
         </div>
         <div class="xp-description">
-          <h2 class="title-experience medium anime fromTop">
+          <h2 class="title-experience medium">
             <span class="stroke">FULL STACK</span> Developper
             <span class="title-company">
               at Parker + Parker
             </span>
           </h2>
-          <p class="description-experience anime fromBottom">
+          <p class="description-experience">
             Integration: Bootstrap, HTML / CSS Wordpress: Theme development
             Symfony
           </p>
@@ -72,6 +72,31 @@
 <script>
 export default {
   name: "ExperiencesList",
+  methods: {
+    experience() {
+      var inputs = document.querySelectorAll(".input");
+      var paras = document.querySelectorAll(".xp-description");
+      inputs.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          let activeInput = document.querySelector(".input.active");
+          let activeParas = document.querySelector(".xp-description.active");
+          let t = e.target;
+          let ind = this.getNodeindex(t);
+          let matchedPara = paras[ind];
+          activeInput.classList.remove("active");
+          activeParas.classList.remove("active");
+          t.classList.add("active");
+          matchedPara.classList.add("active");
+        });
+      });
+    },
+    getNodeindex(elm) {
+      return [...elm.parentNode.children].findIndex((c) => c == elm);
+    },
+  },
+  mounted() {
+    this.experience();
+  },
 };
 </script>
 
@@ -84,22 +109,65 @@ export default {
   align-items: center;
   width: 100%;
   height: 100%;
+
+  h2 {
+    font-family: "Akira";
+    font-weight: 900;
+    font-size: 34px;
+    margin: 0;
+    color: white !important;
+
+    @media screen and (min-width: 1024px) {
+      font-size: 60px !important;
+      text-align: left;
+    }
+
+    .stroke {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(255, 255, 255, 1) !important;
+    }
+  }
 }
 
 .input-flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50vw;
-  position: relative;
+  width: 45vw;
   z-index: 11;
   transform: rotate(90deg);
   position: absolute;
-  left: -1px;
+  left: 35px;
+  overflow: hidden;
 
   @media screen and (max-width: 375px) {
     transform: rotate(0deg);
     top: 50px;
+  }
+
+  &:before {
+    content: "";
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:after {
+    content: "";
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -176,9 +244,8 @@ export default {
 }
 .input.active span::after {
   content: attr(data-year);
-  top: 25px;
-  transform: translateX(-50%);
-  transform: rotate(-90deg) translate(85%, -90%);
+  top: 50%;
+  transform: rotate(-90deg) translate(25%, -100%);
   @media screen and (max-width: 375px) {
     top: 50%;
     left: 50%;
@@ -241,6 +308,7 @@ export default {
     padding-top: 16px;
     margin-right: 64px;
     font-family: "Favorit Regular" !important;
+    text-align: left;
     font-weight: 400 !important;
     font-size: 18px;
     @media screen and (max-width: 375px) {

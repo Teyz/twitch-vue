@@ -28,9 +28,8 @@ export default {
       }
     },
     bgGenerate() {
-      let spaccing = 179;
       const sectionWrapper = document.querySelector("body");
-      for (let i = 0; i < 7; i++) {
+      for (let spaccing = 179; spaccing < window.innerWidth; spaccing += 179) {
         let verticalDivider = document.createElement("div");
         verticalDivider.classList.add("verticalDivider");
         verticalDivider.style.left = spaccing + "px";
@@ -38,7 +37,6 @@ export default {
           verticalDivider.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
         }
         sectionWrapper.appendChild(verticalDivider);
-        spaccing += 179;
       }
     },
   },
