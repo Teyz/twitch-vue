@@ -35,7 +35,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .textSectionRoot {
-  padding: 24px 24px 48px 0px;
+  padding: 24px 24px 24px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;

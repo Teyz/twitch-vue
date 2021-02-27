@@ -46,6 +46,11 @@ export default {
     max-width: 300px;
   }
 
+  .textSection,
+  .imageSection {
+    margin-top: 16px;
+  }
+
   @media screen and (min-width: 1024px) {
     padding-bottom: 48px;
     flex-direction: row;
