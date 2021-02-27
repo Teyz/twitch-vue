@@ -37,10 +37,12 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 32px 0;
 
   @media screen and (min-width: 1024px) {
     flex-direction: row;
     height: 100vh;
+    margin: 0;
   }
 }
 </style>

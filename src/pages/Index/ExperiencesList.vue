@@ -102,6 +102,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.experiencesList {
+  height: 500px;
+}
 .flex-parent {
   display: flex;
   flex-direction: column;
@@ -141,9 +144,16 @@ export default {
   left: 35px;
   overflow: hidden;
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 850px) {
     transform: rotate(0deg);
     top: 50px;
+    left: 0;
+  }
+
+  @media (min-width: 365px) and (max-width: 1024px) {
+    transform: rotate(0deg);
+    left: inherit;
+    top: 32px;
   }
 
   &:before {
@@ -156,6 +166,10 @@ export default {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -168,6 +182,9 @@ export default {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
   }
 }
 
@@ -246,7 +263,7 @@ export default {
   content: attr(data-year);
   top: 50%;
   transform: rotate(-90deg) translate(25%, -100%);
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 850px) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotateZ(0deg);
@@ -272,6 +289,11 @@ export default {
     bottom: 250px;
     width: 100vw;
   }
+
+  @media (min-width: 365px) and (max-width: 1024px) {
+    left: inherit;
+    top: 270px;
+  }
 }
 .description-flex-container .xp-description {
   margin-top: 0;
@@ -294,11 +316,15 @@ export default {
       font-size: 18px;
       padding: 11px;
       right: 60px;
-      bottom: -20px;
+      bottom: -30px;
       border-radius: 2px;
       transform: rotate(-3deg);
       @media screen and (max-width: 375px) {
         font-size: 14px;
+        bottom: -40px;
+      }
+      @media (min-width: 365px) and (max-width: 1024px) {
+        bottom: -40px;
       }
     }
   }
@@ -330,18 +356,30 @@ export default {
 }
 @media (max-width: 850px) {
   .input {
-    width: 17px;
-    height: 17px;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px 50px;
+    background-color: white;
   }
   .input::before,
   .input::after {
-    height: 3px;
+    content: none;
   }
-  .input::before {
-    left: calc(-4vw + 8.5px);
+  .input span {
+    width: 100%;
+    height: 100%;
+    display: block;
   }
-  .input::after {
-    right: calc(-4vw + 8.5px);
+  .input span::before {
+    top: calc(100% + 5px);
+    transform: translateX(-50%);
+    text-indent: 0;
+    text-align: center;
+  }
+  .input span::after {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ecf0f1;
   }
 }
 @media (max-width: 600px) {
@@ -354,7 +392,6 @@ export default {
     justify-content: center;
     width: 100%;
     height: auto;
-    margin-top: 15vh;
   }
 
   .input {
@@ -387,11 +424,6 @@ export default {
   .description-flex-container {
     margin-top: 30px;
     text-align: center;
-  }
-}
-@media (max-width: 400px) {
-  body {
-    min-height: 950px;
   }
 }
 </style>
