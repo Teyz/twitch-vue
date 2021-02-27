@@ -1,5 +1,5 @@
 {
-  "name": "vue-cv",
+  "name": "BastienRigaud",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,10 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@meforma/vue-toaster": "^1.2.2",
     "aos": "^2.3.4",
     "core-js": "^3.9.0",
     "emailjs-com": "^2.6.4",
     "register-service-worker": "^1.7.1",
+    "stylus": "^0.54.8",
+    "stylus-loader": "3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },

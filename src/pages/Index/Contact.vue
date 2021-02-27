@@ -5,24 +5,24 @@
       <div class="formRow" data-aos="fade-right" data-aos-delay="100">
         <label for="name">Hey my name is </label>
         <input type="text" id="name" name="name" required v-model="name" />
-        <label for="subject">and I'm looking for</label>
-        <select name="subject" id="subject required" v-model="project">
+        <label for="project">and I'm looking for</label>
+        <select name="project" id="project required" v-model="project">
           <option value="discuss">Discuss</option>
           <option value="quote">Quotation</option>
           <option value="project">Project</option>
         </select>
       </div>
       <div class="formRow" data-aos="fade-left" data-aos-delay="200">
-        <label for="mail">Get in touch with me at</label>
-        <input type="email" id="mail" name="mail" required v-model="email" />
+        <label for="email">Get in touch with me at</label>
+        <input type="email" id="email" name="email" required v-model="email" />
       </div>
-      <div class="formRow">
+      <div class="formRow" data-aos="fade-right" data-aos-delay="300">
         <input type="checkbox" id="aggrement" name="aggrement" required />
         <label for="aggrement" class="checkbox-label"
           >I accept all terms and conditions</label
         >
       </div>
-      <div class="formRow">
+      <div class="formRow" data-aos="fade-left" data-aos-delay="400">
         <button type="submit">Send enquiry</button>
       </div>
     </form>
@@ -63,11 +63,24 @@ export default {
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
+            this.$toast.success("Email envoyé !", {
+              position: "top-right",
+            });
+            this.resetForm();
           },
           (error) => {
             console.log("FAILED...", error);
+            this.resetForm();
+            this.$toast.error("Une erreur est survenue", {
+              position: "top-right",
+            });
           }
         );
+    },
+    resetForm() {
+      this.name = "";
+      this.email = "";
+      this.project = "";
     },
   },
 };
