@@ -16,7 +16,7 @@
         url="https://creativete.rivp.fr/"
       />
     </Wrapper>
-    <Wrapper title="Portfolio" size="small" id="">
+    <Wrapper title="Portfolio" size="small" id="portfolio">
       <PortfolioItem
         title="brawks"
         image="/img/portfolio/brawks.png"
@@ -49,6 +49,31 @@ export default {
     ExperiencesList,
     About,
     Contact,
+  },
+  mounted() {
+    this.scrollAnchor();
+  },
+  methods: {
+    scrollAnchor() {
+      let mainNavLinks = document.querySelectorAll(".nav-item");
+
+      window.addEventListener("scroll", (event) => {
+        let fromTop = window.scrollY - 50;
+
+        mainNavLinks.forEach((link) => {
+          let section = document.querySelector(link.hash);
+
+          if (
+            section.offsetTop <= fromTop + 55 &&
+            section.offsetTop + section.offsetHeight > fromTop + 55
+          ) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      });
+    },
   },
 };
 </script>

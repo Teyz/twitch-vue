@@ -31,6 +31,10 @@ a {
   &:hover {
     color: white;
   }
+
+  &.active {
+    color: white !important;
+  }
 }
 
 #small {
