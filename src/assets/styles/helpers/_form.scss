@@ -57,6 +57,9 @@ input[type="checkbox"] + label:before {
   left: 0;
   top: 50%;
   transform: translate(0, -75%);
+  @media screen and (max-width: 375px) {
+    transform: translate(10%, -193%);
+  }
 }
 input[type="checkbox"]:checked + label:before {
   background: $purple;

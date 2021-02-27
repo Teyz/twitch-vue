@@ -1,22 +1,26 @@
-body {
-  background-color: $dark-grey;
-  font-family: "Favorit Regular";
-  font-size: 18px;
-  color: white;
-  position: relative;
-  margin: 0;
+html {
+  overflow: auto;
+  body {
+    background-color: $dark-grey;
+    font-family: "Favorit Regular";
+    font-size: 18px;
+    color: white;
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
 
-  .verticalDivider {
-    display: none;
+    .verticalDivider {
+      display: none;
 
-    @media screen and (min-width: 1024px) {
-      display: block;
-      z-index: -1;
-      position: absolute;
-      top: 0;
-      background-color: rgba(255, 255, 255, 0.2);
-      height: 100%;
-      width: 1px;
+      @media screen and (min-width: 1024px) {
+        display: block;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 1px;
+      }
     }
   }
 }

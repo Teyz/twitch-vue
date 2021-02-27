@@ -102,6 +102,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.experiencesList {
+  height: 80vh;
+}
 .flex-parent {
   display: flex;
   flex-direction: column;
@@ -144,6 +147,7 @@ export default {
   @media screen and (max-width: 375px) {
     transform: rotate(0deg);
     top: 50px;
+    left: 0;
   }
 
   &:before {
@@ -156,6 +160,10 @@ export default {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
   }
 
   &:after {
@@ -168,6 +176,9 @@ export default {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    @media screen and (max-width: 375px) {
+      display: none;
+    }
   }
 }
 
@@ -354,7 +365,6 @@ export default {
     justify-content: center;
     width: 100%;
     height: auto;
-    margin-top: 15vh;
   }
 
   .input {
