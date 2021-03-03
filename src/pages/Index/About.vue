@@ -8,30 +8,19 @@
     />
     <TextImageSection
       image="img/about/CursusScolaire.png"
-      text="J'ai eu un parcours assez classique en commencant par l'optention
-      d'un BAC S spe SVT en 2016, puis d'un DUT Informatique en 2018 a l'Universite 
-      de Villetaneuse. Changement de cap en 2018 avec un Bachelor Chef de projet multimedia.
-      Petite annee de perdition en 2019 avec un echec en Master informatique pour ensuite rebondir avec un mastere developpement web a l'ECV
-      Digital Bordeaux."
+      text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     />
-    <TextImageSection
-      isReverse
-      image="img/about/CursusScolaire.png"
-      text="J'ai eu un parcours assez classique en commencant par l'optention
-      d'un BAC S spe SVT en 2016, puis d'un DUT Informatique en 2018 a l'Universite 
-      de Villetaneuse. Changement de cap en 2018 avec un Bachelor Chef de projet multimedia.
-      Petite annee de perdition en 2019 avec un echec en Master informatique pour ensuite rebondir avec un mastere developpement web a l'ECV
-      Digital Bordeaux."
-    />
+    <Slider />
   </div>
 </template>
 
 <script>
 import TextSection from "../../components/TextSection";
 import TextImageSection from "../../components/TextImageSection";
+import Slider from "./Slider";
 export default {
   name: "About",
-  components: { TextSection, TextImageSection },
+  components: { TextSection, TextImageSection, Slider },
 };
 </script>
 

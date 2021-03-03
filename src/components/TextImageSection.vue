@@ -12,11 +12,9 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { onMounted } from "vue";
 export default {
   name: "TextImageSection",
-  created() {
-    AOS.init();
-  },
   props: {
     image: {
       type: String,
@@ -31,6 +29,11 @@ export default {
       default: false,
     },
   },
+  setup() {
+    onMounted(() => {
+      AOS.init();
+    });
+  },
 };
 </script>
 
@@ -43,7 +46,7 @@ export default {
   align-items: center;
 
   img {
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .textSection,

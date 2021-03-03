@@ -14,6 +14,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { onMounted } from "vue";
 export default {
   name: "TextSection",
   props: {
@@ -26,8 +27,10 @@ export default {
       default: "",
     },
   },
-  created() {
-    AOS.init();
+  setup() {
+    onMounted(() => {
+      AOS.init();
+    });
   },
 };
 </script>
@@ -40,11 +43,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h3 {
-    font-family: "Akira";
-  }
-
   @media screen and (min-width: 1024px) {
     h3 {
       text-align: left;
