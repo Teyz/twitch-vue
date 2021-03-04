@@ -17,15 +17,16 @@
       </div>
       <div class="description-flex-container">
         <div class="xp-description active">
-          <h2 class="title-experience medium anime fromTop">
+          <h2 class="title-experience medium">
             <span class="stroke">Full stack</span> developper
-            <span class="title-company anime fromRight">
+            <span class="title-company">
               at GZones
             </span>
           </h2>
-          <p class="description-experience anime fromBottom">
-            Improvement of the design Refactoring code (AngularJS & JAVA) Use
-            and development of API REST / JSON
+          <p class="description-experience">
+            <span>Amelioration du design</span>
+            <span>Refactoring code (AngularJs / Java)</span>
+            <span>Utilisation et developpement API REST / JSON</span>
           </p>
         </div>
         <div class="xp-description">
@@ -36,8 +37,8 @@
             </span>
           </h2>
           <p class="description-experience">
-            Integration: Bootstrap, HTML / CSS Wordpress: Premium Theme
-            Modification (PHP)
+            <span>Integration: Bootstrap, HTML / CSS </span>
+            <span>Wordpress: Premium Theme</span>
           </p>
         </div>
         <div class="xp-description">
@@ -48,8 +49,10 @@
             </span>
           </h2>
           <p class="description-experience">
-            IT expert for the Cdiscount & RS Components: Consulting and sales
-            (Student employment)
+            <span
+              >Expert Informatique pour le site Cdiscount & RS Components:
+              Conseil et vente (Emploi etudiant)</span
+            >
           </p>
         </div>
         <div class="xp-description">
@@ -60,8 +63,8 @@
             </span>
           </h2>
           <p class="description-experience">
-            Integration: Bootstrap, HTML / CSS Wordpress: Theme development
-            Symfony
+            <span>Création de site (Wordpress / Symfony)</span>
+            <span>Bonne pratique accessibilite</span>
           </p>
         </div>
       </div>
@@ -338,6 +341,8 @@ export default {
     text-align: left;
     font-weight: 400 !important;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
     @media screen and (max-width: 375px) {
       font-size: 38px;
       margin-right: 0px;
