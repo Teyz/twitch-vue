@@ -11,9 +11,6 @@
 <script>
 export default {
   name: "Commands",
-  data() {
-    return {};
-  },
   props: {
     name: {
       type: String,
@@ -24,12 +21,15 @@ export default {
       default: "",
     },
   },
-  methods: {
-    async postCommand(command) {
+  setup() {
+    const postCommand = async (command) => {
       const res = await fetch(
         "https://cdn.teyz.fr:7000/" + command + "/brawks/kill/"
       );
-    },
+    };
+    return {
+      postCommand,
+    };
   },
 };
 </script>
