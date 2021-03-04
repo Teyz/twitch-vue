@@ -33,21 +33,14 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
+import { onMounted, ref } from "vue";
 export default {
   name: "Contact",
-  data() {
-    return {
-      name: "",
-      project: "",
-      email: "",
-    };
-  },
-  created() {
-    AOS.init();
-  },
-  methods: {
-    sendEmail(e) {
-      console.log(this.name, this.email, this.project);
+  setup() {
+    const name = ref("");
+    const project = ref("");
+    const email = ref("");
+    const sendEmail = (e) => {
       emailjs
         .sendForm(
           "service_3myt38i",
@@ -55,9 +48,9 @@ export default {
           e.target,
           "user_UCQM7Dx1nsQped1PwUprh",
           {
-            name: this.name,
-            email: this.email,
-            project: this.project,
+            name: name.value,
+            email: email.value,
+            project: project.value,
           }
         )
         .then(
@@ -76,12 +69,18 @@ export default {
             });
           }
         );
-    },
-    resetForm() {
-      this.name = "";
-      this.email = "";
-      this.project = "";
-    },
+    };
+    const resetForm = () => {
+      name.value = "";
+      project.value = "";
+      email.value = "";
+    };
+    onMounted(() => {
+      AOS.init();
+    });
+    return {
+      sendEmail,
+    };
   },
 };
 </script>

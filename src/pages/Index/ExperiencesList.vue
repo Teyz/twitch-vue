@@ -74,7 +74,7 @@ import { onMounted } from "vue";
 export default {
   name: "ExperiencesList",
   setup() {
-    function experience() {
+    const experience = () => {
       var inputs = document.querySelectorAll(".input");
       var paras = document.querySelectorAll(".xp-description");
       inputs.forEach((element) => {
@@ -90,10 +90,10 @@ export default {
           matchedPara.classList.add("active");
         });
       });
-    }
-    function getNodeindex(elm) {
+    };
+    const getNodeindex = (elm) => {
       return [...elm.parentNode.children].findIndex((c) => c == elm);
-    }
+    };
     onMounted(() => {
       experience();
     });

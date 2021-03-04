@@ -40,6 +40,7 @@ import PortfolioItem from "./Index/PortfolioItem";
 import ExperiencesList from "./Index/ExperiencesList";
 import About from "./Index/About";
 import Contact from "./Index/Contact";
+import { onMounted } from "vue";
 export default {
   name: "Index",
   components: {
@@ -50,11 +51,8 @@ export default {
     About,
     Contact,
   },
-  mounted() {
-    this.scrollAnchor();
-  },
-  methods: {
-    scrollAnchor() {
+  setup() {
+    const scrollAnchor = () => {
       let mainNavLinks = document.querySelectorAll(".nav-item");
 
       window.addEventListener("scroll", (event) => {
@@ -73,7 +71,10 @@ export default {
           }
         });
       });
-    },
+    };
+    onMounted(() => {
+      scrollAnchor();
+    });
   },
 };
 </script>

@@ -5,7 +5,7 @@
     <a class="nav-item" href="/#portfolio">Portfolio</a>
     <a class="nav-item" href="/#experiences">Experiences</a>
     <a class="nav-item" href="/#contact">Contact</a>
-    <svg viewBox="0 0 100 80" width="40" height="40" v-on:click="showMenu()">
+    <svg viewBox="0 0 100 80" width="40" height="40" v-on:click="showMenu">
       <rect width="100" height="10" rx="4" fill="white"></rect>
       <rect y="30" width="100" height="10" rx="4" fill="white"></rect>
       <rect y="60" width="100" height="10" rx="4" fill="white"></rect>
@@ -15,22 +15,21 @@
 </template>
 
 <script>
+import { onMounted } from "vue";
 export default {
   name: "App",
-  mounted() {
-    this.bgGenerate();
-  },
-  methods: {
-    showMenu() {
+  setup() {
+    const showMenu = () => {
       let x = document.getElementById("nav");
       if (x.className === "topnav") {
         x.className += " responsive";
       } else {
         x.className = "topnav";
       }
-    },
-    bgGenerate() {
+    };
+    const bgGenerate = () => {
       const sectionWrapper = document.querySelector("body");
+      console.log(sectionWrapper);
       for (let spaccing = 179; spaccing < window.innerWidth; spaccing += 179) {
         let verticalDivider = document.createElement("div");
         verticalDivider.classList.add("verticalDivider");
@@ -40,7 +39,13 @@ export default {
         }
         sectionWrapper.appendChild(verticalDivider);
       }
-    },
+    };
+    onMounted(() => {
+      bgGenerate();
+    });
+    return {
+      showMenu,
+    };
   },
 };
 </script>
