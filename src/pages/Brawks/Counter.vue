@@ -14,19 +14,13 @@
 
 <script>
 import CommandsList from "./CommandsList.vue";
+import { onBeforeMount, ref } from "vue";
 export default {
   components: { CommandsList },
   name: "Counter",
-  data() {
-    return {
-      counter: {},
-    };
-  },
-  beforeMount() {
-    this.getCounter();
-  },
-  methods: {
-    async getCounter() {
+  setup() {
+    const counter = ref(0);
+    const getCounter = async () => {
       const evtSource = new EventSource(
         "https://cdn.teyz.fr:7000/GET/brawks/kill",
         {
@@ -36,9 +30,15 @@ export default {
 
       evtSource.addEventListener("connected", (e) => {
         let data = JSON.parse(e.data);
-        this.counter = data.kill;
+        counter.value = data.kill;
       });
-    },
+    };
+    onBeforeMount(() => {
+      getCounter();
+    });
+    return {
+      counter,
+    };
   },
 };
 </script>

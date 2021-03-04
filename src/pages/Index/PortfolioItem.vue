@@ -24,6 +24,7 @@
 <script>
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { onMounted } from "vue";
 export default {
   name: "PortfolioItem",
   props: {
@@ -48,8 +49,10 @@ export default {
       default: false,
     },
   },
-  created() {
-    AOS.init();
+  setup() {
+    onMounted(() => {
+      AOS.init();
+    });
   },
 };
 </script>

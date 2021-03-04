@@ -70,10 +70,11 @@
 </template>
 
 <script>
+import { onMounted } from "vue";
 export default {
   name: "ExperiencesList",
-  methods: {
-    experience() {
+  setup() {
+    const experience = () => {
       var inputs = document.querySelectorAll(".input");
       var paras = document.querySelectorAll(".xp-description");
       inputs.forEach((element) => {
@@ -81,7 +82,7 @@ export default {
           let activeInput = document.querySelector(".input.active");
           let activeParas = document.querySelector(".xp-description.active");
           let t = e.target;
-          let ind = this.getNodeindex(t);
+          let ind = getNodeindex(t);
           let matchedPara = paras[ind];
           activeInput.classList.remove("active");
           activeParas.classList.remove("active");
@@ -89,13 +90,13 @@ export default {
           matchedPara.classList.add("active");
         });
       });
-    },
-    getNodeindex(elm) {
+    };
+    const getNodeindex = (elm) => {
       return [...elm.parentNode.children].findIndex((c) => c == elm);
-    },
-  },
-  mounted() {
-    this.experience();
+    };
+    onMounted(() => {
+      experience();
+    });
   },
 };
 </script>
