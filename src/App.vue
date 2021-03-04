@@ -29,7 +29,6 @@ export default {
     };
     const bgGenerate = () => {
       const sectionWrapper = document.querySelector("body");
-      console.log(sectionWrapper);
       for (let spaccing = 179; spaccing < window.innerWidth; spaccing += 179) {
         let verticalDivider = document.createElement("div");
         verticalDivider.classList.add("verticalDivider");

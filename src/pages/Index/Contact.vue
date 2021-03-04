@@ -57,15 +57,13 @@ export default {
         )
         .then(
           (result) => {
-            console.log("SUCCESS!", result.status, result.text);
             toast.success("Email envoyé !", {
               position: "top-right",
             });
-            this.resetForm();
+            resetForm();
           },
           (error) => {
-            console.log("FAILED...", error);
-            this.resetForm();
+            resetForm();
             toast.error("Une erreur est survenue", {
               position: "top-right",
             });
@@ -82,6 +80,9 @@ export default {
     });
     return {
       sendEmail,
+      name,
+      project,
+      email,
     };
   },
 };
