@@ -34,9 +34,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
 import { onMounted, ref } from "vue";
+import { useToast } from "vue-toastification";
 export default {
   name: "Contact",
   setup() {
+    const toast = useToast();
     const name = ref("");
     const project = ref("");
     const email = ref("");
@@ -56,7 +58,7 @@ export default {
         .then(
           (result) => {
             console.log("SUCCESS!", result.status, result.text);
-            this.$toast.success("Email envoyé !", {
+            toast.success("Email envoyé !", {
               position: "top-right",
             });
             this.resetForm();
@@ -64,7 +66,7 @@ export default {
           (error) => {
             console.log("FAILED...", error);
             this.resetForm();
-            this.$toast.error("Une erreur est survenue", {
+            toast.error("Une erreur est survenue", {
               position: "top-right",
             });
           }
