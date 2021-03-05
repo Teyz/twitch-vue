@@ -1,6 +1,6 @@
 <template>
   <div id="nav" class="topnav">
-    <a class="nav-item active" href="/#home">Home</a>
+    <a class="nav-item active" href="/#home">test</a>
     <a class="nav-item" href="/#aboutme">About Me</a>
     <a class="nav-item" href="/#portfolio">Portfolio</a>
     <a class="nav-item" href="/#experiences">Experiences</a>
