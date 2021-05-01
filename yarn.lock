@@ -8485,6 +8485,13 @@ vue-scrollactive@^0.9.3:
   dependencies:
     bezier-easing "^2.0.3"
 
+vue-sidebar-menu@^5.0.0-alpha.8:
+  version "5.0.0-alpha.8"
+  resolved "https://registry.npmjs.org/vue-sidebar-menu/-/vue-sidebar-menu-5.0.0-alpha.8.tgz"
+  integrity sha512-trgsN8kEpa2b4Zqgjbkqx+zzbCJsv6AtapPis+8JtnF/GkNYl9oDXTi4Nizy4/XLiHUDgNKjV/ta/LbhuLqHPQ==
+  dependencies:
+    vue "^3.0.2"
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/vue-style-loader/-/vue-style-loader-4.1.2.tgz"
@@ -8503,7 +8510,7 @@ vue-toastification@^2.0.0-rc.1:
   resolved "https://registry.npmjs.org/vue-toastification/-/vue-toastification-2.0.0-rc.1.tgz"
   integrity sha512-hjauv/FyesNZdwcr5m1SCyvu1JmlB+Ts5bTptDLDmsYYlj6Oqv8NYakiElpCF+Abwkn9J/AChh6FwkTL1HOb7Q==
 
-vue@^3.0.0:
+vue@^3.0.0, vue@^3.0.2:
   version "3.0.5"
   resolved "https://registry.npmjs.org/vue/-/vue-3.0.5.tgz"
   integrity sha512-TfaprOmtsAfhQau7WsomXZ8d9op/dkQLNIq8qPV3A0Vxs6GR5E+c1rfJS1SDkXRQj+dFyfnec7+U0Be1huiScg==

@@ -1,13 +1,22 @@
 .btn {
-  font-family: "Favorit Regular";
-  font-weight: 700;
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 12px 16px;
+  text-decoration: none;
+  padding: 8px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  text-shadow: none;
+  background: #9146ff;
+  border-radius: 6px;
+  color: #fff;
+  margin-right: 5px;
+  transition: all 0.3s ease;
 
-  &:hover {
-    background-color: #fff;
-    color: $dark-grey;
+  &.light {
+    background: rgba(255, 255, 255, 0.2);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }

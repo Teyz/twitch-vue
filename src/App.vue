@@ -1,59 +1,81 @@
 <template>
-  <div id="nav" class="topnav">
-    <a class="nav-item active" href="/#home">test</a>
-    <a class="nav-item" href="/#aboutme">About Me</a>
-    <a class="nav-item" href="/#portfolio">Portfolio</a>
-    <a class="nav-item" href="/#experiences">Experiences</a>
-    <a class="nav-item" href="/#contact">Contact</a>
-    <svg viewBox="0 0 100 80" width="40" height="40" v-on:click="showMenu">
-      <rect width="100" height="10" rx="4" fill="white"></rect>
-      <rect y="30" width="100" height="10" rx="4" fill="white"></rect>
-      <rect y="60" width="100" height="10" rx="4" fill="white"></rect>
-    </svg>
-  </div>
-  <router-view />
+  <section class="root">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <img src="img/logo.svg" alt="" />
+        </li>
+        <li><a href="">Accueil</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <router-view />
+    </div>
+  </section>
 </template>
 
 <script>
-import { onMounted } from "vue";
 export default {
   name: "App",
-  setup() {
-    const showMenu = () => {
-      let x = document.getElementById("nav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    };
-    const bgGenerate = () => {
-      const sectionWrapper = document.querySelector("body");
-      for (let spaccing = 179; spaccing < window.innerWidth; spaccing += 179) {
-        let verticalDivider = document.createElement("div");
-        verticalDivider.classList.add("verticalDivider");
-        verticalDivider.style.left = spaccing + "px";
-        if (spaccing > 179) {
-          verticalDivider.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
-        }
-        sectionWrapper.appendChild(verticalDivider);
-      }
-    };
-    onMounted(() => {
-      bgGenerate();
-    });
-    return {
-      showMenu,
-    };
-  },
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: "Favorit Regular";
+  font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow: hidden;
+  .root {
+    height: calc(100% - 50px);
+    .navbar {
+      width: 100vw;
+      height: 60px;
+      background-color: $secondary-color;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+
+        li {
+          font-size: 18px;
+          padding: 0 20px;
+
+          a {
+            color: #efeff1;
+            font-size: 20px;
+            line-height: 27px;
+            font-family: "Roobert";
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.5;
+            font-weight: 500;
+
+            &:hover {
+              color: black;
+            }
+          }
+
+          img {
+            height: 32px;
+            width: 94px;
+            fill: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .body {
+      display: flex;
+      height: 100%;
+    }
+  }
 }
 </style>

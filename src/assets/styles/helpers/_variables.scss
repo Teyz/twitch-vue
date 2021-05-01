@@ -1,5 +1,5 @@
 $main-color: #342560;
-$secondary-color: #b53471;
+$secondary-color: #9146ff;
 
 $grey: #dfe6e9;
 $light-grey: white;
@@ -9,3 +9,18 @@ $black: rgba(0, 0, 0, 0.25);
 $red: #d63031;
 $purple: #553e9a;
 $blue: #54a0ff;
+
+$colors: (
+  main-color: $main-color,
+  secondary-color: $secondary-color,
+);
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color !important;
+  }
+
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}

@@ -1,8 +1,5 @@
 <template>
-  <section class="wrapperRoot" :id="id">
-    <h1 class="background-title" :id="size">
-      {{ title }}
-    </h1>
+  <section class="wrapperRoot">
     <slot />
   </section>
 </template>
@@ -10,20 +7,6 @@
 <script>
 export default {
   name: "Wrapper",
-  props: {
-    title: {
-      type: String,
-      default: "",
-    },
-    size: {
-      type: String,
-      default: "normal",
-    },
-    id: {
-      type: String,
-      default: "",
-    },
-  },
 };
 </script>
 
@@ -34,15 +17,8 @@ export default {
   position: relative;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin: 32px 0;
-
-  @media screen and (min-width: 1024px) {
-    flex-direction: row;
-    height: 100vh;
-    margin: 0;
-  }
 }
 </style>
