@@ -2,7 +2,7 @@
   <section class="projectListRoot">
     <div class="container">
       <Hero
-        title="Stories from our Community"
+        title="Projects for our Clients"
         text="Learn how companies are leveraging Twitch Developer products."
       />
       <ul class="projectListMain">

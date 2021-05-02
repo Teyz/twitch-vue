@@ -4,7 +4,7 @@
       <HeroMain />
       <ReassuranceBanner
         img="img/glitch-example.png"
-        text="Create your first extension on Glitch"
+        text="Order your custom web project now."
       />
       <ProjectList />
       <OurClients />

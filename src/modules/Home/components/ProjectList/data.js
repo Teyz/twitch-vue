@@ -1,17 +1,7 @@
 export default [
   {
-    "src": "img/fatshark2-3.png",
-    "text": "A Twitch integration lets the viewers call the shots",
-    "link": "https://www.twitch.tv/huskow"
-  },
-  {
-    "src": "img/fatshark2-3.png",
-    "text": "A Twitch integration lets the viewers call the shots",
-    "link": "https://www.twitch.tv/huskow"
-  },
-  {
-    "src": "img/fatshark2-3.png",
-    "text": "A Twitch integration lets the viewers call the shots",
+    "src": "img/hardzone.png",
+    "text": "A Vue 3 website to display realtime cards on stream.",
     "link": "https://www.twitch.tv/huskow"
   }
 ];

@@ -2,9 +2,6 @@
   <footer>
     <div class="footerTopNav">
       <ul>
-        <li>
-          <img src="img/logo.svg" alt="" />
-        </li>
         <li><a href="">Accueil</a></li>
         <li><a href="">Contact</a></li>
       </ul>
