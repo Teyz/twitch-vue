@@ -12,12 +12,17 @@
     <div class="body">
       <router-view />
     </div>
+    <Footer />
   </section>
 </template>
 
 <script>
+import Footer from "@/components/Footer";
 export default {
   name: "App",
+  components: {
+    Footer,
+  },
 };
 </script>
 

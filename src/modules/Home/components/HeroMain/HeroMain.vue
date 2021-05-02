@@ -31,6 +31,7 @@ export default {
   position: relative;
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
+    overflow: hidden;
 
     &:before {
       content: url(/img/circles-1.png);
