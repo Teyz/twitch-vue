@@ -1,13 +1,18 @@
 <template>
   <section class="main">
-    <Wrapper> </Wrapper>
+    <Wrapper>
+      <Breadcrumb />
+      <ContactSection />
+    </Wrapper>
   </section>
 </template>
 
 <script>
+import Breadcrumb from "@/components/Breadcrumb";
+import ContactSection from "./components/Contact";
 export default {
   name: "Contact",
-  components: {},
+  components: { Breadcrumb, ContactSection },
   setup() {},
 };
 </script>

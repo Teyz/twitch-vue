@@ -1,93 +1,22 @@
-form {
-  font-size: 22px !important;
-  max-width: 811px;
-  margin: 40px 0 0 64px;
-  text-align: left;
-  @media screen and (max-width: 375px) {
-    margin-left: 0px;
-    padding: 32px;
-  }
-}
+input[type="text"] {
+  border-radius: 0.4rem !important;
+  appearance: none;
+  background-clip: padding-box;
+  line-height: 1.5;
+  border-style: solid;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in,
+    background-color 100ms ease-in;
+  border-width: 3px;
+  border-color: rgba($color: #fff, $alpha: 0.2);
+  color: #efeff1;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  display: block;
+  height: 30px;
+  width: 100%;
 
-input,
-select {
-  background-color: transparent !important;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-  font-size: 22px !important;
-  max-width: 140px;
   &:focus {
-    font-size: 22px !important;
-    background-color: transparent i !important;
-    border-bottom: 1px solid $purple;
-    outline: none;
-  }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  border: none;
-  -webkit-text-fill-color: white;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-input[type="checkbox"] {
-  visibility: hidden;
-}
-input[type="checkbox"] + label:before {
-  border: 1px solid white;
-  content: "\00a0";
-  display: inline-block;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-  vertical-align: top;
-  width: 20px;
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translate(0, -75%);
-  @media screen and (max-width: 375px) {
-    transform: translate(10%, -193%);
-  }
-}
-input[type="checkbox"]:checked + label:before {
-  background: $purple;
-  color: white;
-  border: none;
-  content: "\00a0";
-}
-input[type="checkbox"]:checked + label:after {
-  font-weight: bold;
-}
-
-button {
-  font-family: "Favorit Regular";
-  grid-area: link;
-  align-self: end;
-  justify-self: start;
-  z-index: 10;
-  padding: 12px;
-  border: white 1px solid;
-  color: white;
-  border-radius: 2px;
-  font-size: 18px;
-  margin-left: 16px;
-  background-color: transparent;
-  margin: 0;
-
-  &:hover {
-    background-color: white;
-    color: black;
+    border-color: #a970ff;
+    outline: 0;
+    background-color: #000;
   }
 }

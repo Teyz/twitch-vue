@@ -5,8 +5,8 @@
         <li>
           <img src="img/logo.svg" alt="" />
         </li>
-        <li><a href="">Accueil</a></li>
-        <li><a href="">Contact</a></li>
+        <li><router-link tag="li" to="/">Accueil</router-link></li>
+        <li><router-link tag="li" to="/contact">Contact</router-link></li>
       </ul>
     </nav>
     <div class="body">
@@ -60,7 +60,7 @@ export default {
             color: #fff;
             text-decoration: none;
             line-height: 1.5;
-            font-weight: 500;
+            font-weight: 600;
 
             &:hover {
               color: black;
