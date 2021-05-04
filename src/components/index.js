@@ -1,6 +1,4 @@
 export { default as Wrapper } from "./Wrapper.vue";
-export { default as Alert } from "./Alert.vue";
-export { default as Badge } from "./Badge.vue";
 export { default as Hero } from "./Hero.vue";
 export { default as TextColumn } from "./TextColumn.vue";
 export { default as ReassuranceBanner } from "./ReassuranceBanner.vue";

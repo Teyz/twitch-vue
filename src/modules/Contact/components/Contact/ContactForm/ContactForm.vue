@@ -68,7 +68,7 @@ export default {
     p {
       line-height: 1.5;
       color: #adadb8;
-      font-size: 1.3rem;
+      font-size: 18px;
     }
   }
 

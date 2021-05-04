@@ -135,6 +135,10 @@ footer {
         justify-content: center;
         align-items: center;
 
+        &:hover {
+          background: rgba($color: #000000, $alpha: 0.3);
+        }
+
         svg {
           width: 20px;
           height: 20px;

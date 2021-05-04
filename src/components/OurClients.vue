@@ -52,7 +52,7 @@ export default {
     }
   }
   @media screen and (min-width: 1024px) {
-    padding: 80px 0;
+    padding-bottom: 80px;
 
     .clientsSlider {
       .clientSliderList {
