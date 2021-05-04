@@ -1,7 +1,7 @@
 <template>
   <section class="projectListRoot">
     <div class="container">
-      <Hero
+      <Title
         title="Projects for our Clients"
         text="Learn how companies are leveraging Twitch Developer products."
       />
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-import Hero from "@/components/Hero";
+import Title from "@/components/Title";
 import ProjectListItem from "./ProjectListItem";
 import getData from "./data.js";
 export default {
   name: "ProjectList",
   components: {
-    Hero,
+    Title,
     ProjectListItem,
   },
   setup() {
@@ -40,7 +40,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .projectListRoot {
-  .heroRoot {
+  .titleRoot {
     background-color: transparent;
   }
   width: 100%;
@@ -60,7 +60,7 @@ export default {
   }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
-    .heroRoot {
+    .titleRoot {
       padding-top: 0;
     }
   }

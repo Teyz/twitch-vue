@@ -7,3 +7,4 @@ export { default as OurClientsItem } from "./OurClientsItem.vue";
 export { default as Footer } from "./Footer.vue";
 export { default as ProjectListItem } from "./ProjectListItem.vue";
 export { default as ProjectList } from "./ProjectList.vue";
+export { default as Title } from "./Title.vue";

@@ -37,7 +37,7 @@ export default {
     height: calc(100% - 50px);
     .navbar {
       width: 100vw;
-      height: 60px;
+      height: 50px;
       background-color: $secondary-color;
 
       ul {
@@ -47,12 +47,11 @@ export default {
         height: 100%;
 
         li {
-          font-size: 18px;
           padding: 0 20px;
 
           a {
             color: #efeff1;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 27px;
             font-family: "Roobert";
             display: flex;

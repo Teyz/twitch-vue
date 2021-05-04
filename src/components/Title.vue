@@ -1,7 +1,7 @@
 <template>
-  <section class="heroRoot">
+  <section class="titleRoot">
     <div class="container">
-      <h1>{{ title }}</h1>
+      <h2>{{ title }}</h2>
       <h3>{{ text }}</h3>
     </div>
   </section>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "Hero",
+  name: "Title",
   props: {
     title: {
       type: String,
@@ -25,12 +25,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.heroRoot {
+.titleRoot {
   background: #faf9fa;
   padding: 40px 16px;
   width: 100%;
 
-  h1 {
+  h2 {
     font-size: 32px;
     font-weight: bold;
     line-height: 120%;
@@ -54,8 +54,8 @@ export default {
       width: 100%;
       margin: 0 auto;
 
-      h1 {
-        font-size: 72px;
+      h2 {
+        font-size: 60px;
       }
 
       h3 {

@@ -35,7 +35,7 @@ export default {
   width: 100%;
   .breadcrumbMain {
     padding: 16px 40px;
-    font-size: 24px;
+    font-size: 20px;
 
     a {
       color: #a970ff;

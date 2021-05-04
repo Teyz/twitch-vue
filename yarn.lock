@@ -3509,6 +3509,11 @@ emailjs-com@^2.6.4:
   resolved "https://registry.npmjs.org/emailjs-com/-/emailjs-com-2.6.4.tgz"
   integrity sha512-4G8rxq+1mbL4rGntMa9tqNJ4N9BhuCl8lFJASDHxZVXeC82ivwL6qw+Zu48cAWHpNK2/F3vScaAZk8zoTAfiAA==
 
+emailjs@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/emailjs/-/emailjs-3.4.0.tgz#35f3038bfe5dc2f32fc55837dff498b092093cc9"
+  integrity sha512-GYzxHth2mOtfjGvQQYoS7747lrGj/7qohZiY1zQe4CtzVhDuRJ/WNKlhII1tZ0YAUC6190eA7paMuB7AJj4d3w==
+
 emoji-regex@^7.0.1:
   version "7.0.3"
   resolved "https://registry.npmjs.org/emoji-regex/-/emoji-regex-7.0.3.tgz"
@@ -5037,6 +5042,11 @@ isstream@~0.1.2:
   resolved "https://registry.npmjs.org/isstream/-/isstream-0.1.2.tgz"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
+javascript-detect-element-resize@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/javascript-detect-element-resize/-/javascript-detect-element-resize-0.5.3.tgz#1a71cd51dfe565907f299012fe73a294104025de"
+  integrity sha1-GnHNUd/lZZB/KZAS/nOilBBAJd4=
+
 javascript-stringify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/javascript-stringify/-/javascript-stringify-2.0.1.tgz"
@@ -5355,6 +5365,11 @@ lodash@^4.0.0, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.1
   version "4.17.20"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
+lodash@^4.16.1:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -8473,6 +8488,14 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-mixins@^0.3.3:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/vue-mixins/-/vue-mixins-0.3.6.tgz#49e19cf52c8dbc2c65c919ec67a7d8e25e2e9a86"
+  integrity sha1-SeGc9SyNvCxlyRnsZ6fY4l4umoY=
+  dependencies:
+    javascript-detect-element-resize "^0.5.3"
+    lodash "^4.16.1"
+
 vue-router@^4.0.0-0:
   version "4.0.3"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.3.tgz"
@@ -8505,9 +8528,16 @@ vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
+vue-toaster@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vue-toaster/-/vue-toaster-2.0.0.tgz#9afd1e9a5c299312e61587fc15edeb33ac9e8d9f"
+  integrity sha1-mv0emlwpkxLmFYf8Fe3rM6yejZ8=
+  dependencies:
+    vue-mixins "^0.3.3"
+
 vue-toastification@^2.0.0-rc.1:
   version "2.0.0-rc.1"
-  resolved "https://registry.npmjs.org/vue-toastification/-/vue-toastification-2.0.0-rc.1.tgz"
+  resolved "https://registry.yarnpkg.com/vue-toastification/-/vue-toastification-2.0.0-rc.1.tgz#6a994c19635a493eec0ee290e84a966e07c709d2"
   integrity sha512-hjauv/FyesNZdwcr5m1SCyvu1JmlB+Ts5bTptDLDmsYYlj6Oqv8NYakiElpCF+Abwkn9J/AChh6FwkTL1HOb7Q==
 
 vue@^3.0.0, vue@^3.0.2:

@@ -1,7 +1,7 @@
 <template>
   <section class="ourClientsRoot">
     <div class="container">
-      <Hero title="Clients who trust me" />
+      <Title title="Clients who trust me" />
       <div class="clientsSlider">
         <ul class="clientSliderList">
           <li v-for="item in listItem" :key="item.link">
@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import Hero from "./Hero";
+import Title from "./Title";
 import OurClientsItem from "./OurClientsItem";
 import getData from "./OurClientList";
 export default {
   name: "OurClients",
   components: {
     OurClientsItem,
-    Hero,
+    Title,
   },
   setup() {
     const listItem = getData;
@@ -38,7 +38,7 @@ export default {
   width: 100%;
   margin-bottom: 40px;
   .container {
-    .heroRoot {
+    .titleRoot {
       background-color: transparent;
     }
 

@@ -5,10 +5,12 @@
     </div>
     <div class="projectContent">
       <h4>
-        <a :href="link">{{ text }}</a>
+        <router-link tag="li" :to="link">{{ text }}</router-link>
       </h4>
       <div class="projectLink">
-        <a :href="link" class="btn secondary">Learn more</a>
+        <router-link class="btn secondary" tag="li" :to="link"
+          >Learn more</router-link
+        >
       </div>
     </div>
   </div>

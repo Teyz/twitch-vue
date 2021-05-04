@@ -117,7 +117,7 @@ footer {
           font-weight: 500;
 
           &:hover {
-            color: black;
+            color: $secondary-color;
           }
         }
       }

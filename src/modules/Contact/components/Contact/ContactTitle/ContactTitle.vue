@@ -40,14 +40,14 @@ export default {
       text-align: left;
       font-family: "Roobert";
       font-weight: 800;
-      font-size: 48px !important;
+      font-size: 40px !important;
       line-height: 1.2 !important;
     }
 
     h3 {
       line-height: 1.5;
       font-weight: 600;
-      font-size: 24px;
+      font-size: 20px;
       text-align: left;
       padding-top: 10px;
     }
