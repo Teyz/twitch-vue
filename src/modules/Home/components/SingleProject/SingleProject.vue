@@ -29,11 +29,24 @@ export default {
 <style scoped lang="scss">
 .singleProjectRoot {
   width: 100%;
+  .container {
+    .videoContent {
+      video {
+        width: 100%;
+      }
+    }
+  }
   @media screen and (min-width: 1024px) {
     .container {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .videoContent {
+        video {
+          width: 600px;
+        }
+      }
     }
   }
 }

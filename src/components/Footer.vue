@@ -88,7 +88,7 @@ footer {
     margin: 0 auto;
     padding-top: 40px;
     padding-bottom: 40px;
-    justify-content: space-between;
+    justify-content: center;
 
     ul {
       display: flex;
@@ -99,6 +99,10 @@ footer {
       li {
         font-size: 18px;
         padding: 0 20px;
+
+        &:first-child {
+          padding-left: 0;
+        }
 
         a {
           color: #efeff1;
@@ -152,9 +156,19 @@ footer {
       justify-content: flex-end;
       margin: 0 auto;
       max-width: 1200px;
-      width: 100%;
       color: white;
-      padding: 24px 0;
+      padding: 24px 24px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .footerTopNav {
+      justify-content: space-between;
+    }
+    .footerSubNav {
+      .footerCopyright {
+        width: 100%;
+        padding: 24px 0;
+      }
     }
   }
 }

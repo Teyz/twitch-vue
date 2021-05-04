@@ -29,6 +29,7 @@ export default {
   width: 100%;
   background: #faf9fa;
   position: relative;
+
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
     overflow: hidden;
@@ -45,23 +46,6 @@ export default {
       position: absolute;
       right: -15%;
       bottom: -20%;
-    }
-
-    h1 {
-      font-size: 72px;
-      font-weight: bold;
-      line-height: 120%;
-      text-align: center;
-      margin: 0;
-      margin-bottom: 14px;
-    }
-
-    h3 {
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 120%;
-      margin-top: 0;
-      text-align: center;
     }
   }
 }

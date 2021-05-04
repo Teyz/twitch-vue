@@ -42,7 +42,6 @@ export default {
 .projectListRoot {
   .heroRoot {
     background-color: transparent;
-    padding-top: 0;
   }
   width: 100%;
   position: relative;
@@ -61,6 +60,9 @@ export default {
   }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
+    .heroRoot {
+      padding-top: 0;
+    }
   }
 }
 </style>

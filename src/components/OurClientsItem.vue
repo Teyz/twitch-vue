@@ -26,11 +26,11 @@ export default {
 <style scoped lang="scss">
 .ourClientsItemRoot {
   width: 100%;
+  img {
+    height: 100px;
+  }
   @media screen and (min-width: 1024px) {
     margin-top: 32px;
-    img {
-      height: 100px;
-    }
   }
 }
 </style>

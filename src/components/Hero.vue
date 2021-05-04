@@ -26,26 +26,40 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .heroRoot {
-  width: 100%;
   background: #faf9fa;
+  padding: 40px 16px;
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 120%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    margin-top: 0;
+    text-align: center;
+  }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
 
-    h1 {
-      font-size: 72px;
-      font-weight: bold;
-      line-height: 120%;
-      text-align: center;
-      margin: 0;
-      margin-bottom: 14px;
-    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
 
-    h3 {
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 120%;
-      margin-top: 0;
-      text-align: center;
+      h1 {
+        font-size: 72px;
+      }
+
+      h3 {
+        font-size: 24px;
+      }
     }
   }
 }

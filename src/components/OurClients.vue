@@ -1,9 +1,7 @@
 <template>
   <section class="ourClientsRoot">
     <div class="container">
-      <div class="titleContent">
-        <h3>Clients who trust me</h3>
-      </div>
+      <Hero title="Clients who trust me" />
       <div class="clientsSlider">
         <ul class="clientSliderList">
           <li v-for="item in listItem" :key="item.link">
@@ -16,12 +14,14 @@
 </template>
 
 <script>
+import Hero from "./Hero";
 import OurClientsItem from "./OurClientsItem";
 import getData from "./OurClientList";
 export default {
   name: "OurClients",
   components: {
     OurClientsItem,
+    Hero,
   },
   setup() {
     const listItem = getData;
@@ -36,12 +36,10 @@ export default {
 <style scoped lang="scss">
 .ourClientsRoot {
   width: 100%;
-  @media screen and (min-width: 1024px) {
-    padding: 80px 0;
-
-    h3 {
-      font-size: 24px;
-      line-height: 120%;
+  margin-bottom: 40px;
+  .container {
+    .heroRoot {
+      background-color: transparent;
     }
 
     .clientsSlider {
@@ -49,6 +47,16 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 80px 0;
+
+    .clientsSlider {
+      .clientSliderList {
+        flex-direction: row !important;
       }
     }
   }

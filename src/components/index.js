@@ -7,3 +7,5 @@ export { default as ReassuranceBanner } from "./ReassuranceBanner.vue";
 export { default as OurClients } from "./OurClients.vue";
 export { default as OurClientsItem } from "./OurClientsItem.vue";
 export { default as Footer } from "./Footer.vue";
+export { default as ProjectListItem } from "./ProjectListItem.vue";
+export { default as ProjectList } from "./ProjectList.vue";

@@ -31,10 +31,34 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .reassuranceBannerRoot {
-  width: 100%;
+  padding: 40px 16px;
   background: $secondary-color;
+  .container {
+    .imageContent {
+      img {
+        width: 100%;
+      }
+    }
+
+    .textContent {
+      h2 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        margin: 0;
+        padding-top: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      a {
+        margin-top: 24px;
+      }
+    }
+  }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
+    width: 100%;
 
     .container {
       display: flex;
@@ -53,13 +77,8 @@ export default {
         display: flex;
         flex-direction: column;
         h2 {
-          font-weight: 600;
           font-size: 36px;
-          line-height: 120%;
-          margin: 0;
-          padding-top: 10px;
           text-align: left;
-          color: white;
         }
 
         a {

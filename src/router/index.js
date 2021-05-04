@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Contact from '@/pages/Contact.vue';
+import Brawks from '@/pages/Brawks.vue';
 import NotFound from '@/pages/NotFound.vue';
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/brawks',
+    name: 'Brawks',
+    component: Brawks
   },
   {
     path: "/:catchAll(.*)",
