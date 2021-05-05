@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { trackRouter } from "vue-gtag-next";
 import Home from '@/pages/Home.vue';
 import Contact from '@/pages/Contact.vue';
 import Brawks from '@/pages/Brawks.vue';
@@ -30,5 +31,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+trackRouter(router);
 
 export default router
