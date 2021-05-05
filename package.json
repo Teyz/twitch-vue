@@ -17,7 +17,6 @@
     "stylus": "^0.54.8",
     "stylus-loader": "3",
     "vue": "^3.0.0",
-    "vue-gtag-next": "^1.14.0",
     "vue-router": "^4.0.0-0",
     "vue-scrollactive": "^0.9.3",
     "vue-sidebar-menu": "^5.0.0-alpha.8",
