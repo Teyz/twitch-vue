@@ -18,16 +18,42 @@
         <a :href="link" class="btn light" target="_blank">Show on Twitch</a>
       </div>
       <div class="projectMain">
-        <video autoplay width="600" loop>
+        <video v-if="index === 0" autoplay width="600" loop>
           <source src="media/Hardzone.mp4" type="video/mp4" />
         </video>
+        <div v-if="index === 1" class="videoContainer">
+          <video autoplay width="300" loop>
+            <source src="media/Wheel.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div v-if="index === 2" class="projectApiContainer">
+          <div class="apiResult">
+            <h3 class="apiCounter">{{ counter }}</h3>
+          </div>
+          <div class="apiCommands">
+            <button class="btn light" v-on:click="addCounterKill">Add</button>
+            <button class="btn light" v-on:click="deleteCounterKill">
+              Delete
+            </button>
+            <button class="btn light" v-on:click="resetCounterKill">
+              Reset
+            </button>
+          </div>
+          <div class="inputShowUrl">
+            <input
+              type="text"
+              value="http://brawks-counter.teyz.fr/brawks"
+              readonly
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 export default {
   name: "ProjectDetail",
   props: {
@@ -43,15 +69,54 @@ export default {
       type: String,
       default: "",
     },
+    index: {
+      type: Number,
+      default: 0,
+    },
     tags: {
       type: String,
       default: "",
     },
   },
   setup(props) {
+    const counter = ref(0);
     const formatedTags = computed(() => props.tags.split(", "));
+
+    const getCounter = () => {
+      const evtSource = new EventSource(
+        `http://brawks-counter.teyz.fr/get/brawks/kill`,
+        {
+          crossDomain: true,
+        }
+      );
+
+      evtSource.addEventListener("connected", (e) => {
+        let data = JSON.parse(e.data);
+        counter.value = data.kill;
+      });
+    };
+
+    const addCounterKill = () => {
+      fetch("http://brawks-counter.teyz.fr/put/brawks/kill");
+    };
+
+    const deleteCounterKill = () => {
+      fetch("http://brawks-counter.teyz.fr/update/brawks/kill");
+    };
+
+    const resetCounterKill = () => {
+      fetch("http://brawks-counter.teyz.fr/delete/brawks/kill");
+    };
+
+    getCounter();
+
     return {
       formatedTags,
+      getCounter,
+      counter,
+      addCounterKill,
+      deleteCounterKill,
+      resetCounterKill,
     };
   },
 };
@@ -119,9 +184,52 @@ export default {
 
       .projectMain {
         padding: 24px 16px;
+        align-self: center;
 
         video {
           border-radius: 8px;
+        }
+
+        .videoContainer {
+          width: 600px;
+        }
+
+        .projectApiContainer {
+          width: 600px;
+          .apiResult {
+            .apiCounter {
+              color: white;
+              font-size: 60px;
+              text-align: center;
+              font-weight: 800;
+              margin-bottom: 24px;
+              margin-left: 0;
+              width: 100%;
+            }
+          }
+          .apiCommands {
+            margin-bottom: 16px;
+
+            button {
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+
+          .inputShowUrl {
+            position: relative;
+            input {
+              text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+              color: transparent;
+              text-align: center;
+
+              &:focus {
+                text-shadow: unset;
+                color: white;
+              }
+            }
+          }
         }
       }
     }

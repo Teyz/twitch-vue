@@ -6,25 +6,22 @@ export default [
     "description": "This library will allow you to abstract the Twitch extension helper for your twitch extension project using Vue/Vuex.",
     "tags": "Vue 3, NodeJS",
     "link": "https://www.twitch.tv/brokybrawkstv",
-    "video": true,
     "index": 0
   },
   {
     "img": "img/clients/hardzone.png",
     "name": "La Grosse Game - Lucky Wheel",
     "description": "This library will allow you to abstract the Twitch extension helper for your twitch extension project using Vue/Vuex.",
-    "tags": "NodeJS",
+    "tags": "Php, JS",
     "link": "https://www.twitch.tv/brokybrawkstv",
-    "video": false,
     "index": 1
   },
   {
     "img": "img/clients/hardzone.png",
-    "name": "Hardzone",
+    "name": "La Grosse Game - Realtime Counter",
     "description": "This library will allow you to abstract the Twitch extension helper for your twitch extension project using Vue/Vuex.",
-    "tags": "Php, JS",
+    "tags": "NodeJs",
     "link": "https://www.twitch.tv/brokybrawkstv",
-    "video": false,
     "index": 2
   }
 ];

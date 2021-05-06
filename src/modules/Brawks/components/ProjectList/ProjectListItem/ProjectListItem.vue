@@ -66,6 +66,7 @@ export default {
 .projectListItemRoot {
   cursor: default;
   width: 250px;
+  height: 350px;
   border-radius: 3px;
   position: relative;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 80px rgba(0, 0, 0, 0.1);
