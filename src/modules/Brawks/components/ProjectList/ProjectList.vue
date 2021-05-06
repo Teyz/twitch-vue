@@ -2,8 +2,8 @@
   <section class="projectListRoot">
     <div class="container">
       <ProjectListItem
-        v-for="project in projectList"
-        :key="project.index"
+        v-for="(project, index) in projectList"
+        :key="index"
         :img="project.img"
         :name="project.name"
         :description="project.description"
@@ -12,7 +12,20 @@
         @setIndex="getIndex"
       />
     </div>
-    <ProjectDetail />
+    <template
+      v-for="(project, index) in projectList"
+      :key="'ProjectDetailsIndex-' + index"
+    >
+      <transition name="fade">
+        <ProjectDetail
+          :name="project.name"
+          :description="project.description"
+          :link="project.link"
+          :tags="project.tags"
+          v-if="activeIndex === index"
+        />
+      </transition>
+    </template>
   </section>
 </template>
 
@@ -20,18 +33,22 @@
 import ProjectListItem from "./ProjectListItem";
 import getData from "./data.js";
 import ProjectDetail from "./ProjectDetail";
+import { ref } from "vue";
 export default {
   name: "ProjectList",
   components: { ProjectListItem, ProjectDetail },
-  methods: {
-    getIndex(value) {
-      console.log(value);
-    },
-  },
   setup() {
     const projectList = getData;
+    const activeIndex = ref(0);
+
+    const getIndex = (value) => {
+      activeIndex.value = value;
+    };
+
     return {
       projectList,
+      getIndex,
+      activeIndex,
     };
   },
 };
@@ -50,6 +67,16 @@ export default {
       max-width: 1200px;
       margin: 0 auto;
     }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
   }
 }
 </style>

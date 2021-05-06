@@ -4,10 +4,14 @@
       <img :src="img" alt="" />
       <h2>{{ name }}</h2>
       <p class="author">Created by Teyz</p>
-      <p>{{ description }}</p>
+      <p class="description">{{ description }}</p>
       <div class="tags">
-        <div class="tag" v-for="tag in tags" :key="tag">
-          {{ tag }}
+        <div
+          class="tag"
+          v-for="(formatedTags, index) in formatedTags"
+          :key="index"
+        >
+          {{ formatedTags }}
         </div>
       </div>
     </div>
@@ -15,6 +19,8 @@
 </template>
 
 <script>
+import { computed } from "vue";
+
 export default {
   name: "ProjectListItem",
   props: {
@@ -39,19 +45,19 @@ export default {
       default: 0,
     },
   },
-  methods: {
-    setIndex() {
-      this.$emit("setIndex", this.index);
-    },
-  },
-  setup(props) {
-    let tags = props.tags;
-    tags = tags.split(", ");
+  setup(props, { emit }) {
+    const formatedTags = computed(() => props.tags.split(", "));
+
+    const setIndex = () => {
+      emit("setIndex", props.index);
+    };
 
     return {
-      tags,
+      setIndex,
+      formatedTags,
     };
   },
+  emits: ["setIndex"],
 };
 </script>
 
@@ -66,7 +72,11 @@ export default {
 
   &:hover {
     background-color: $secondary-color;
-    transition: background-color 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.034),
+      0 8.7px 6.9px rgba(0, 0, 0, 0.049), 0 17.7px 14.2px rgba(0, 0, 0, 0.061),
+      0 36.5px 29.2px rgba(0, 0, 0, 0.076), 0 100px 80px rgba(0, 0, 0, 0.11);
+
     .container {
       h2,
       p,
@@ -107,6 +117,14 @@ export default {
       line-height: 1.5;
       font-size: 14px;
       margin-bottom: 10px;
+    }
+
+    .description {
+      display: -webkit-box;
+      max-width: 200px;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .tags {
