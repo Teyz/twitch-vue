@@ -98,7 +98,7 @@ export default {
   .container {
     padding: 24px 16px;
     img {
-      width: 100%;
+      width: 60px;
     }
     h2 {
       color: $secondary-color;
@@ -132,6 +132,11 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      width: 100%;
+      transform: translateX(-50%);
 
       .tag {
         padding: 4px;
@@ -142,13 +147,6 @@ export default {
         margin: 4px;
         cursor: default;
         font-weight: 600;
-      }
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    .container {
-      img {
-        width: 60px;
       }
     }
   }

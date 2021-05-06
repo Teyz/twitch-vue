@@ -55,14 +55,19 @@ export default {
 <style scoped lang="scss">
 .projectListRoot {
   width: 100%;
+  .container {
+    padding: 80px 0;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 16px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
   @media screen and (min-width: 1024px) {
     .container {
-      padding: 80px 0;
-      display: grid;
-      grid-template-columns: repeat(3, 300px);
-      align-items: center;
-      justify-items: center;
-      justify-content: center;
+      grid-template-columns: repeat(3, 300px) !important;
+      grid-template-rows: inherit;
       max-width: 1200px;
       margin: 0 auto;
     }

@@ -125,111 +125,137 @@ export default {
 .projectDetailRoot {
   width: 100%;
   background-color: $secondary-color;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .projectDescription {
+      padding: 24px 16px 24px 16px;
+      align-self: center;
+      text-align: center;
+
+      .tags {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        .tag {
+          padding: 4px;
+          border-radius: 4px;
+          background-color: rgba($color: white, $alpha: 0.1);
+          border: 1px solid rgba($color: white, $alpha: 0.1);
+          color: white;
+          margin: 4px;
+          cursor: default;
+          font-weight: 600;
+          font-size: 10px;
+
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+
+      h3 {
+        color: white;
+        font-weight: 800;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+
+      p {
+        color: white;
+        text-align: center;
+        line-height: 1.5;
+        margin-bottom: 24px;
+      }
+    }
+
+    .projectMain {
+      padding: 24px 16px;
+      align-self: center;
+
+      video {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .projectApiContainer {
+        width: 600px;
+        .apiResult {
+          .apiCounter {
+            color: white;
+            font-size: 60px;
+            text-align: center;
+            font-weight: 800;
+            margin-bottom: 24px;
+            margin-left: 0;
+            width: 100%;
+          }
+        }
+        .apiCommands {
+          margin-bottom: 16px;
+
+          button {
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .inputShowUrl {
+          position: relative;
+          input {
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+            color: transparent;
+            text-align: center;
+
+            &:focus {
+              text-shadow: unset;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
 
     .container {
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
+      flex-direction: row;
 
       .projectDescription {
         padding: 0px 16px 24px 16px;
-        width: 100%;
         max-width: 400px;
         align-self: center;
         text-align: left;
+        width: 100%;
 
         .tags {
-          display: flex;
-          align-items: center;
           justify-content: flex-start;
-          margin-bottom: 16px;
-
-          .tag {
-            padding: 4px;
-            border-radius: 4px;
-            background-color: rgba($color: white, $alpha: 0.1);
-            border: 1px solid rgba($color: white, $alpha: 0.1);
-            color: white;
-            margin: 4px;
-            cursor: default;
-            font-weight: 600;
-            font-size: 10px;
-
-            &:first-child {
-              margin-left: 0;
-            }
-          }
         }
 
         h3 {
-          color: white;
-          font-weight: 800;
-          font-size: 40px;
           text-align: left;
-          margin-bottom: 10px;
-          margin-top: 0;
         }
 
         p {
-          color: white;
           text-align: left;
-          line-height: 1.5;
-          margin-bottom: 24px;
         }
       }
 
       .projectMain {
-        padding: 24px 16px;
-        align-self: center;
-
-        video {
-          border-radius: 8px;
-        }
-
         .videoContainer {
           width: 600px;
-        }
-
-        .projectApiContainer {
-          width: 600px;
-          .apiResult {
-            .apiCounter {
-              color: white;
-              font-size: 60px;
-              text-align: center;
-              font-weight: 800;
-              margin-bottom: 24px;
-              margin-left: 0;
-              width: 100%;
-            }
-          }
-          .apiCommands {
-            margin-bottom: 16px;
-
-            button {
-              &:last-child {
-                margin-right: 0;
-              }
-            }
-          }
-
-          .inputShowUrl {
-            position: relative;
-            input {
-              text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-              color: transparent;
-              text-align: center;
-
-              &:focus {
-                text-shadow: unset;
-                color: white;
-              }
-            }
-          }
         }
       }
     }

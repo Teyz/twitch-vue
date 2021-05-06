@@ -28,7 +28,6 @@ export default {
 .heroRoot {
   background: #faf9fa;
   padding: 40px 16px;
-  width: 100%;
 
   h1 {
     font-size: 32px;
@@ -48,6 +47,7 @@ export default {
   }
   @media screen and (min-width: 1024px) {
     padding: 80px 0;
+    width: 100%;
 
     .container {
       max-width: 800px;
