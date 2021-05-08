@@ -1,7 +1,7 @@
 <template>
   <div class="projectListItemRoot" v-on:click="setIndex">
     <div class="container">
-      <img :src="img" alt="" />
+      <img :src="img" alt="" :class="size" />
       <h2>{{ name }}</h2>
       <p class="author">Created by Teyz</p>
       <p class="description">{{ description }}</p>
@@ -25,6 +25,10 @@ export default {
   name: "ProjectListItem",
   props: {
     img: {
+      Type: String,
+      default: "",
+    },
+    size: {
       Type: String,
       default: "",
     },
@@ -99,6 +103,12 @@ export default {
     padding: 24px 16px;
     img {
       width: 60px;
+
+      @media screen and (min-width: 1024px) {
+        &.xlImage {
+          width: 120px;
+        }
+      }
     }
     h2 {
       color: $secondary-color;

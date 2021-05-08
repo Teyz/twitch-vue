@@ -12,13 +12,18 @@
           </div>
         </div>
         <h3>{{ name }}</h3>
+        <h4 v-if="concept">Concept</h4>
+        <p>
+          {{ concept }}
+        </p>
+        <h4>Development</h4>
         <p>
           {{ description }}
         </p>
         <a :href="link" class="btn light" target="_blank">Show on Twitch</a>
       </div>
       <div class="projectMain">
-        <video v-if="index === 0" autoplay width="600" loop>
+        <video v-if="index === 0" autoplay width="300" loop>
           <source src="media/Hardzone.mp4" type="video/mp4" />
         </video>
         <div v-if="index === 1" class="videoContainer">
@@ -58,6 +63,10 @@ export default {
   name: "ProjectDetail",
   props: {
     name: {
+      type: String,
+      default: "",
+    },
+    concept: {
       type: String,
       default: "",
     },
@@ -165,8 +174,16 @@ export default {
         font-weight: 800;
         font-size: 40px;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
         margin-top: 0;
+      }
+
+      h4 {
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
       }
 
       p {
@@ -244,7 +261,8 @@ export default {
           justify-content: flex-start;
         }
 
-        h3 {
+        h3,
+        h4 {
           text-align: left;
         }
 
@@ -254,6 +272,10 @@ export default {
       }
 
       .projectMain {
+        video {
+          width: 600px;
+          border-radius: 8px;
+        }
         .videoContainer {
           width: 600px;
         }

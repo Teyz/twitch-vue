@@ -7,11 +7,8 @@
         </video>
       </div>
       <TextColumn
-        title="Twitch Extensions"
-        text="Twitch Extensions enable you
-      to create live apps that interact with the stream, as a panel on a
-      channel, or with chat. Create interactive experiences such as mini-games,
-      leaderboards, live gear information and more."
+        title="Bot, website, ..."
+        text="I offer streamers and others custom solutions. From the simple website to the more complex one, but also extensions and Twitch bot."
       />
     </div>
   </section>

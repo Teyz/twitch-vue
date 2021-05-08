@@ -23,6 +23,11 @@ export default {
   components: {
     Footer,
   },
+  watch: {
+    $route(to, from) {
+      document.title = "Bastien Rigaud - " + to.name || "Bastien Rigaud";
+    },
+  },
 };
 </script>
 

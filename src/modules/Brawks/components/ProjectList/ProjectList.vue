@@ -5,6 +5,7 @@
         v-for="(project, index) in projectList"
         :key="index"
         :img="project.img"
+        :size="project.size"
         :name="project.name"
         :description="project.description"
         :tags="project.tags"
@@ -18,6 +19,7 @@
     >
       <ProjectDetail
         :name="project.name"
+        :concept="project.concept"
         :description="project.description"
         :link="project.link"
         :tags="project.tags"

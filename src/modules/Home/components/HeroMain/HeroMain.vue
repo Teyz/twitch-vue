@@ -2,9 +2,8 @@
   <section class="heroMainRoot">
     <div class="container">
       <Hero
-        title="Build the future of live entertainment."
-        text="Twitch provides developers products and solutions that extend the lifecycle
-                of entertainment beyond the screen."
+        title="Build the future of your live entertainment."
+        text="You need a developer for a project ? I can advise you and help you in the realization of it."
       />
       <SingleProject />
     </div>

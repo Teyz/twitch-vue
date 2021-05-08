@@ -41,7 +41,7 @@ export default {
   h3 {
     font-weight: 400;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 140%;
     margin-top: 0;
     text-align: center;
   }
