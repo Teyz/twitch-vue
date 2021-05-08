@@ -5,14 +5,6 @@
         <div class="contactLabel">
           <label for="project-name">Give a name of your project</label>
         </div>
-        <div class="contactDescription">
-          <p>
-            Veuillez donner un nom à votre extension. Le nom de votre extension
-            ne doit inclure aucun des mots suivants. euillez donner un nom à
-            votre extension. Le nom de votre extension ne doit inclure aucun des
-            mots suivants.
-          </p>
-        </div>
         <div class="contactFormInput">
           <input type="text" name="project-name" v-model="projectName" />
         </div>
@@ -30,7 +22,32 @@
           />
         </div>
       </div>
-      <button class="btn-form" :disabled="!projectClient">
+      <div class="contactFormEmail">
+        <div class="contactLabel">
+          <label for="client-name">Email</label>
+        </div>
+        <div class="contactFormInput">
+          <input
+            type="email"
+            name="client-email"
+            v-model="projectEmail"
+            required
+          />
+        </div>
+      </div>
+      <div class="contactFormDescription">
+        <div class="contactLabel">
+          <label for="client-name">Description</label>
+        </div>
+        <div class="contactFormInput">
+          <textarea
+            name="client-description"
+            v-model="projectDescription"
+            required
+          />
+        </div>
+      </div>
+      <button class="btn-form" :disabled="projectClient > 0">
         Continuer
       </button>
     </form>
@@ -48,6 +65,8 @@ export default {
     const toast = useToast();
     const projectName = ref("");
     const projectClient = ref("");
+    const projectDescription = ref("");
+    const projectEmail = ref("");
     const sendEmail = (e) => {
       emailjs
         .sendForm(
@@ -58,6 +77,8 @@ export default {
           {
             project: projectName.value,
             name: projectClient.value,
+            description: projectDescription.value,
+            email: projectEmail.value,
           }
         )
         .then(
@@ -78,10 +99,18 @@ export default {
         );
     };
 
+    const isDisable = (projectName, projectClient, projectEmail) => {
+      console.log(projectName);
+      return projectName > 0 && projectClient > 0 && projectEmail > 0;
+    };
+
     return {
       projectName,
       projectClient,
+      projectDescription,
+      projectEmail,
       sendEmail,
+      isDisable,
     };
   },
 };
@@ -95,16 +124,6 @@ export default {
 
   .contactLabel {
     margin-bottom: 12px;
-  }
-
-  .contactDescription {
-    width: 100%;
-    margin-bottom: 12px;
-    p {
-      line-height: 1.5;
-      color: #adadb8;
-      font-size: 16px;
-    }
   }
 
   .contactFormInput {
