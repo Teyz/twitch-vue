@@ -1,29 +1,89 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <section class="root">
+    <nav class="navbar">
+      <ul>
+        <li>
+          <img src="img/logo.svg" alt="" />
+        </li>
+        <li><router-link tag="li" to="/">Accueil</router-link></li>
+        <li><router-link tag="li" to="/contact">Contact</router-link></li>
+      </ul>
+    </nav>
+    <div class="body">
+      <router-view />
+    </div>
+    <Footer />
+  </section>
 </template>
+
+<script>
+import Footer from "@/components/Footer";
+export default {
+  name: "App",
+  components: {
+    Footer,
+  },
+  watch: {
+    $route(to, from) {
+      document.title = "Bastien Rigaud - " + to.name || "Bastien Rigaud";
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
+  overflow: hidden;
+  .root {
+    height: calc(100% - 50px);
+    .navbar {
+      width: 100vw;
+      height: 50px;
+      background-color: $secondary-color;
 
-#nav {
-  padding: 30px;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+        li {
+          padding: 0 20px;
 
-    &.router-link-exact-active {
-      color: #42b983;
+          a {
+            color: #efeff1;
+            font-size: 16px;
+            line-height: 27px;
+            font-family: "Roobert";
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            line-height: 1.5;
+            font-weight: 600;
+
+            &:hover {
+              color: black;
+            }
+          }
+
+          img {
+            height: 32px;
+            width: 94px;
+            fill: #fff;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .body {
+      display: flex;
+      height: 100%;
     }
   }
 }

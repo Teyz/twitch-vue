@@ -1,0 +1,27 @@
+input,
+textarea {
+  border-radius: 4px !important;
+  appearance: none;
+  background-clip: padding-box;
+  line-height: 1.5;
+  border-style: solid;
+  transition: box-shadow 100ms ease-in, border 100ms ease-in,
+    background-color 100ms ease-in;
+  border-width: 3px;
+  border-color: rgba($color: #fff, $alpha: 0.2);
+  color: #efeff1;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+  display: block;
+  height: 30px;
+  width: 100%;
+
+  &:focus {
+    border-color: #a970ff;
+    outline: 0;
+    background-color: #000;
+  }
+}
+
+textarea {
+  height: 80px;
+}

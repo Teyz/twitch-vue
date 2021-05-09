@@ -1,0 +1,11 @@
+@keyframes scrollIndication {
+  0% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(90deg);
+  }
+}
