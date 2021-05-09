@@ -6,7 +6,12 @@
           <label for="project-name">Give a name of your project</label>
         </div>
         <div class="contactFormInput">
-          <input type="text" name="project-name" v-model="projectName" />
+          <input
+            type="text"
+            name="project-name"
+            v-model="projectName"
+            required
+          />
         </div>
       </div>
       <div class="contactFormName">
@@ -24,7 +29,7 @@
       </div>
       <div class="contactFormEmail">
         <div class="contactLabel">
-          <label for="client-name">Email</label>
+          <label for="client-email">Email</label>
         </div>
         <div class="contactFormInput">
           <input
@@ -47,7 +52,7 @@
           />
         </div>
       </div>
-      <button class="btn-form" :disabled="projectClient > 0">
+      <button class="btn-form" :disabled="isDisable">
         Continuer
       </button>
     </form>
@@ -55,7 +60,7 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import emailjs from "emailjs-com";
 import { useToast } from "vue-toastification";
 export default {
@@ -68,6 +73,12 @@ export default {
     const projectDescription = ref("");
     const projectEmail = ref("");
     const sendEmail = (e) => {
+      console.log(
+        projectName.value,
+        projectClient.value,
+        projectDescription.value,
+        projectEmail.value
+      );
       emailjs
         .sendForm(
           "cdn-teyz",
@@ -88,20 +99,32 @@ export default {
               toastClassName: "teyz",
               position: "top-right",
             });
-            router.push({ name: "Home" });
+            resetForm();
           },
           (error) => {
             console.log("FAILED...", error);
             toast.error("Une erreur est survenue", {
               position: "top-right",
             });
+            resetForm();
           }
         );
     };
 
-    const isDisable = (projectName, projectClient, projectEmail) => {
-      console.log(projectName);
-      return projectName > 0 && projectClient > 0 && projectEmail > 0;
+    const isDisable = computed(() => {
+      return (
+        projectName.value === "" ||
+        projectClient.value === "" ||
+        projectEmail.value === "" ||
+        projectDescription.value === ""
+      );
+    });
+
+    const resetForm = () => {
+      projectName.value = "";
+      projectClient.value = "";
+      projectEmail.value = "";
+      projectDescription.value = "";
     };
 
     return {
@@ -111,6 +134,7 @@ export default {
       projectEmail,
       sendEmail,
       isDisable,
+      resetForm,
     };
   },
 };
