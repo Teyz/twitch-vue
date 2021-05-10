@@ -47,7 +47,7 @@
           <div class="inputShowUrl">
             <input
               type="text"
-              value="http://brawks-counter.teyz.fr/brawks"
+              value="https://shrouded-mesa-01032.herokuapp.com/brawks"
               readonly
             />
           </div>
