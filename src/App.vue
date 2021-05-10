@@ -25,7 +25,8 @@ export default {
   },
   watch: {
     $route(to, from) {
-      document.title = "Bastien Rigaud - " + to.name || "Bastien Rigaud";
+      document.title =
+        'Bastien "Teyz" Rigaud - ' + to.name || 'Bastien "Teyz" Rigaud';
     },
   },
 };
