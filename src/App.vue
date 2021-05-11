@@ -5,7 +5,7 @@
         <li>
           <img src="img/logo.svg" alt="" />
         </li>
-        <li><router-link tag="li" to="/">Accueil</router-link></li>
+        <li><router-link tag="li" to="/">Home</router-link></li>
         <li><router-link tag="li" to="/contact">Contact</router-link></li>
       </ul>
     </nav>

@@ -2,8 +2,11 @@
   <footer>
     <div class="footerTopNav">
       <ul>
-        <li><a href="">Accueil</a></li>
-        <li><a href="">Contact</a></li>
+        <li><router-link tag="li" to="/">Home</router-link></li>
+        <li><router-link tag="li" to="/contact">Contact</router-link></li>
+        <li>
+          <router-link tag="li" to="/terms">Terms of service</router-link>
+        </li>
       </ul>
       <div class="socialIcons">
         <a href="https://www.twitter.com/FrTeyz" target="_blank">
