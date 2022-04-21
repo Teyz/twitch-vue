@@ -24,8 +24,15 @@
       </div>
       <div class="projectMain">
         <div class="webcamRoot">
-          <camera :resolution="{ width: 206, height: 131 }" autoplay class="camera"/>
-          <img :src="`img/gameSelect/${gameSelect}.png`" alt="Game logo for Gotaga at ZLan" class="gameSelectLogo">
+          <camera :resolution="{ width: 206, height: 131 }" autoplay class="camera" ref="camera" @loading="loading"
+        @started="started"
+        @stopped="stopped"
+        @paused="paused"
+        @resumed="resumed"
+        @camera-change="cameraChange"
+        @snapshot="snapshot"/>
+          <div v-if="isLoading" class="no_camera"></div>
+          <img :src="`img/gameSelect/${gameSelect}.png`" alt="Game logo for Gotaga at ZLan" class="gameSelectLogo" :class="{isLoading}">
           <video autoplay loop>
             <source src="media/cam_gotaga.webm" type="video/webm" />
           </video>
@@ -74,10 +81,19 @@ export default {
   setup(props) {
     const formatedTags = computed(() => props.tags.split(", "));
     const gameSelect = ref("apex");
+    const isLoading = ref(true);
+
+    const loading = () => isLoading.value = true;
+    const started = () => isLoading.value = false;
+    const stopped = () => isLoading.value = true;
 
     return {
       formatedTags,
-      gameSelect
+      gameSelect,
+      loading,
+      started,
+      stopped,
+      isLoading
     };
   },
 };
@@ -152,11 +168,6 @@ export default {
       padding: 24px 16px;
       align-self: center;
 
-      .camera{
-        background-color: red;
-
-      }
-
       video {
         width: 100%;
         border-radius: 8px;
@@ -203,6 +214,7 @@ export default {
       .webcamRoot{
         position: relative;
         width: 506px;
+        height: 330px;
         video {
           position: absolute;
           top: -25px;
@@ -211,10 +223,19 @@ export default {
         }
       }
 
+      .no_camera{
+        background: #000;
+        position: absolute;
+        top: 0;
+        width: 508px;
+        height: 330px;
+        left: 0;
+      }
+
       .gameSelectLogo{
         position: absolute;
         width: 100px;
-        bottom: -5px;
+        bottom: 0;
         left: 30%;
         z-index: 1;
       }
