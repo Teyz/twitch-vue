@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Contact from '@/pages/Contact.vue';
 import Brawks from '@/pages/Brawks.vue';
+import Terms from '@/pages/Terms.vue';
 import NotFound from '@/pages/NotFound.vue';
 
 const routes = [
@@ -21,6 +22,11 @@ const routes = [
     component: Brawks
   },
   {
+    path: '/terms',
+    name: 'Terms of service',
+    component: Terms
+  },
+  {
     path: "/:catchAll(.*)",
     component: NotFound,
   },
@@ -28,7 +34,10 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+  }
 })
 
 export default router

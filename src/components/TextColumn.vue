@@ -51,6 +51,10 @@ export default {
       font-size: 24px;
       text-align: left;
     }
+
+    p {
+      font-size: 20px;
+    }
   }
 }
 </style>

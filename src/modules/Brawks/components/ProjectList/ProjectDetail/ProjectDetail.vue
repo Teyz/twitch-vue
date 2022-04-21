@@ -47,7 +47,7 @@
           <div class="inputShowUrl">
             <input
               type="text"
-              value="http://brawks-counter.teyz.fr/brawks"
+              value="https://shrouded-mesa-01032.herokuapp.com/brawks"
               readonly
             />
           </div>
@@ -93,7 +93,7 @@ export default {
 
     const getCounter = () => {
       const evtSource = new EventSource(
-        `http://brawks-counter.teyz.fr/get/brawks/kill`,
+        `https://shrouded-mesa-01032.herokuapp.com/get/brawks/kill`,
         {
           crossDomain: true,
         }
@@ -106,15 +106,15 @@ export default {
     };
 
     const addCounterKill = () => {
-      fetch("http://brawks-counter.teyz.fr/put/brawks/kill");
+      fetch("https://shrouded-mesa-01032.herokuapp.com/put/brawks/kill");
     };
 
     const deleteCounterKill = () => {
-      fetch("http://brawks-counter.teyz.fr/update/brawks/kill");
+      fetch("https://shrouded-mesa-01032.herokuapp.com/update/brawks/kill");
     };
 
     const resetCounterKill = () => {
-      fetch("http://brawks-counter.teyz.fr/delete/brawks/kill");
+      fetch("https://shrouded-mesa-01032.herokuapp.com/delete/brawks/kill");
     };
 
     getCounter();

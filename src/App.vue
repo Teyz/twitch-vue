@@ -5,7 +5,7 @@
         <li>
           <img src="img/logo.svg" alt="" />
         </li>
-        <li><router-link tag="li" to="/">Accueil</router-link></li>
+        <li><router-link tag="li" to="/">Home</router-link></li>
         <li><router-link tag="li" to="/contact">Contact</router-link></li>
       </ul>
     </nav>
@@ -25,7 +25,8 @@ export default {
   },
   watch: {
     $route(to, from) {
-      document.title = "Bastien Rigaud - " + to.name || "Bastien Rigaud";
+      document.title =
+        'Bastien "Teyz" Rigaud - ' + to.name || 'Bastien "Teyz" Rigaud';
     },
   },
 };
