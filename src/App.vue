@@ -28,7 +28,7 @@ export default {
       document.title =
         'Bastien "Teyz" Rigaud - ' + to.name || 'Bastien "Teyz" Rigaud';
     },
-  },
+  }
 };
 </script>
 

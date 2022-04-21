@@ -2,7 +2,7 @@
   <section class="main">
     <Wrapper>
       <Hero
-        title="Brawks"
+        title="Gotaga"
         text="Former professional player on Call of Duty, now an ambassador for @Team_Vitality !"
       />
       <ProjectList />

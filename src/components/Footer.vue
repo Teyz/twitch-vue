@@ -65,7 +65,7 @@
     </div>
     <div class="footerSubNav">
       <div class="footerCopyright">
-        <p>© 2021 Teyz, Inc.</p>
+        <p>© 2022 Teyz, Inc.</p>
       </div>
     </div>
   </footer>
