@@ -4,6 +4,7 @@
       <Hero
         title="Brawks"
         text="Former professional player on Call of Duty, now an ambassador for @Team_Vitality !"
+        i18nKey="brawks"
       />
       <ProjectList />
     </Wrapper>

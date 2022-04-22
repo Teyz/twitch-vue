@@ -80,7 +80,7 @@ export default {
     i18nKey: {
       type: String,
       default: ""
-    }
+    },
   },
   setup(props) {
     const formatedTags = computed(() => props.tags.split(", "));

@@ -1,7 +1,7 @@
 <template>
   <div class="breadcrumbRoot">
     <div class="breadcrumbMain">
-      <a href="/">Home</a>
+      <a href="/">{{$t('contact.home')}}</a>
       <span> / </span>
       <span>{{ urlPath }}</span>
     </div>

@@ -14,13 +14,13 @@
         <h3>{{ name }}</h3>
         <h4 v-if="concept">Concept</h4>
         <p>
-          {{ concept }}
+          {{ $t(`${i18nKey}.${project}.concept`) }}
         </p>
-        <h4>Development</h4>
+        <h4>{{ $t(`utils.developpment`) }}</h4>
         <p>
-          {{ description }}
+          {{ $t(`${i18nKey}.${project}.description`) }}
         </p>
-        <a :href="link" class="btn light" target="_blank">Show on Twitch</a>
+        <a :href="link" class="btn light" target="_blank">{{ $t(`utils.show`) }}</a>
       </div>
       <div class="projectMain">
         <video v-if="index === 0" autoplay width="300" loop>
@@ -36,12 +36,12 @@
             <h3 class="apiCounter">{{ counter }}</h3>
           </div>
           <div class="apiCommands">
-            <button class="btn light" v-on:click="addCounterKill">Add</button>
+            <button class="btn light" v-on:click="addCounterKill">{{ $t(`${i18nKey}.lggCounter.add`) }}</button>
             <button class="btn light" v-on:click="deleteCounterKill">
-              Delete
+              {{ $t(`${i18nKey}.lggCounter.delete`) }}
             </button>
             <button class="btn light" v-on:click="resetCounterKill">
-              Reset
+              {{ $t(`${i18nKey}.lggCounter.reset`) }}
             </button>
           </div>
           <div class="inputShowUrl">
@@ -86,6 +86,14 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: ""
+    },
+    project: {
+      type: String,
+      default: ""
+    }
   },
   setup(props) {
     const counter = ref(0);
