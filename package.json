@@ -19,6 +19,7 @@
     "stylus-loader": "3",
     "vue": "^3.0.0",
     "vue-cam-vision": "^0.0.8",
+    "vue-i18n": "9",
     "vue-router": "^4.0.0-0",
     "vue-sidebar-menu": "^5.0.0-alpha.8",
     "vue-toaster": "^2.0.0",

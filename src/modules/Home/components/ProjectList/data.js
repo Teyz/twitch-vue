@@ -1,11 +1,13 @@
 export default [
   {
-    "src": "img/zlan.png",
+    "key": "gotaga",
+    "src": "img/zlan.webp",
     "text": "A simple NodeJs & React module to change game Logo for ZLAN event.",
     "link": "/gotaga"
   },
   {
-    "src": "img/hardzone.png",
+    "key": "brawks",
+    "src": "img/hardzone.webp",
     "text": "A Vue 3 website to display realtime cards on stream.",
     "link": "/brawks"
   }

@@ -5,7 +5,7 @@
         <img :src="img" alt="Reassurance image for contact page" />
       </div>
       <div class="textContent">
-        <h2>{{ text }}</h2>
+        <h2>{{ $t("message.bannerText") }}</h2>
         <a href="/contact" class="btn light">Contact</a>
       </div>
     </div>
@@ -49,6 +49,7 @@ export default {
         padding-top: 10px;
         text-align: center;
         color: white;
+        max-width: 500px;
       }
 
       a {

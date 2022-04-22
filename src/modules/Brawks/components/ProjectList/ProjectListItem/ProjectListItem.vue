@@ -3,8 +3,8 @@
     <div class="container">
       <img :src="img" alt="" :class="size" />
       <h2>{{ name }}</h2>
-      <p class="author">Created by Teyz</p>
-      <p class="description">{{ description }}</p>
+      <p class="author">{{ $t("utils.created")}}</p>
+      <p class="description" :class="size">{{ $t(`${i18nKey}.${project}.description`) }}</p>
       <div class="tags">
         <div
           class="tag"
@@ -48,6 +48,14 @@ export default {
       Type: Number,
       default: 0,
     },
+    i18nKey: {
+      type: String,
+      default: ""
+    },
+    project: {
+      type: String,
+      default: ""
+    }
   },
   setup(props, { emit }) {
     const formatedTags = computed(() => props.tags.split(", "));

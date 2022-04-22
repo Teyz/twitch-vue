@@ -34,14 +34,14 @@ export default {
     overflow: hidden;
 
     &:before {
-      content: url(/img/circles-1.png);
+      content: url(/img/circles-1.webp);
       position: absolute;
       left: -15%;
       top: 10%;
     }
 
     &:after {
-      content: url(/img/circles-2.png);
+      content: url(/img/circles-2.webp);
       position: absolute;
       right: -15%;
       bottom: -20%;

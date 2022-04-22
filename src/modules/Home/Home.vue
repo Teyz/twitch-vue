@@ -3,7 +3,7 @@
     <Wrapper>
       <HeroMain />
       <ReassuranceBanner
-        img="img/glitch-example.png"
+        img="img/glitch-example.webp"
         text="Order your custom web project now."
       />
       <ProjectList />

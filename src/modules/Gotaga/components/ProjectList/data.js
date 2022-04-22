@@ -1,6 +1,7 @@
 export default [
   {
-    "img": "img/clients/gotaga.png",
+    "key": "gotaga",
+    "img": "img/clients/gotaga.webp",
     "size": "big",
     "video": "media/cam_gotaga.webm",
     "name": "ZLAN x Gotaga",

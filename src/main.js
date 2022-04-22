@@ -7,10 +7,20 @@ import Toast from "vue-toastification";
 import Camera from "simple-vue-camera";
 // Import the CSS or use your own!
 import "vue-toastification/dist/index.css";
+import { messages } from './translations';
+import { createI18n } from 'vue-i18n'
+
+const i18n = createI18n({
+      // set locale
+    locale: 'fr',
+    // set locale messages
+    messages
+})
 
 createApp(App)
   .use(router)
   .use(Toast)
+  .use(i18n)
   .component("Wrapper", Wrapper)
   .component("camera", Camera)
   .mount('#app')

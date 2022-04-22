@@ -3,7 +3,7 @@
     <form @submit.prevent="sendEmail">
       <div class="contactFormProject">
         <div class="contactLabel">
-          <label for="project-name">Give a name of your project</label>
+          <label for="project-name">{{ $t('contact.labelName') }}</label>
         </div>
         <div class="contactFormInput">
           <input
@@ -16,7 +16,7 @@
       </div>
       <div class="contactFormName">
         <div class="contactLabel">
-          <label for="client-name">Name & Lastname</label>
+          <label for="client-name">{{ $t('contact.labelClientName') }}</label>
         </div>
         <div class="contactFormInput">
           <input
@@ -53,7 +53,7 @@
         </div>
       </div>
       <button class="btn-form" :disabled="isDisable">
-        Continuer
+        {{ $t('contact.send') }}
       </button>
     </form>
   </div>

@@ -10,6 +10,7 @@
         :description="project.description"
         :tags="project.tags"
         :index="project.index"
+        :i18nKey="project.key"
         @setIndex="getIndex"
       />
     </div>
@@ -24,6 +25,7 @@
         :link="project.link"
         :tags="project.tags"
         :index="index"
+        :i18nKey="project.key"
         v-if="activeIndex === index"
       />
     </template>

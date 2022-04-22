@@ -3,8 +3,8 @@
     <Wrapper>
       <div class="NotFoundRoot">
         <div class="container">
-          <h2>Oops, something went wrong!</h2>
-          <img src="/img/notfound.png" alt="" />
+          <h2>{{$t("utils.notFound")}}</h2>
+          <img src="/img/notfound.webp" alt="" />
         </div>
       </div>
     </Wrapper>

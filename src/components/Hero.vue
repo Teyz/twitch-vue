@@ -1,8 +1,8 @@
 <template>
   <section class="heroRoot">
     <div class="container">
-      <h1>{{ title }}</h1>
-      <h3>{{ text }}</h3>
+      <h1>{{ $t(`${i18nKey}.heroTitle`) }}</h1>
+      <h3>{{ $t(`${i18nKey}.heroText`) }}</h3>
     </div>
   </section>
 </template>
@@ -19,6 +19,10 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: "gotaga"
+    }
   },
 };
 </script>

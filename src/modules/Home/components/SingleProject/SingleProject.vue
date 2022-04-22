@@ -3,7 +3,7 @@
     <div class="container">
       <div class="videoContent">
         <video autoplay width="600" loop>
-          <source src="media/Hardzone.mp4" type="video/mp4" />
+          <source src="media/Hardzone.webm" type="video/mp4" />
         </video>
       </div>
       <TextColumn

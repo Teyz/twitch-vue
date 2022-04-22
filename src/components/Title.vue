@@ -1,8 +1,8 @@
 <template>
   <section class="titleRoot">
     <div class="container">
-      <h2>{{ title }}</h2>
-      <h3>{{ text }}</h3>
+      <h2>{{ $t(`${i18nKey}.${i18nKey}Title`) }}</h2>
+      <h3>{{ $t(`${i18nKey}.${i18nKey}Text`) }}</h3>
     </div>
   </section>
 </template>
@@ -19,7 +19,14 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: "project"
+    }
   },
+  setup(props){
+    console.log(props.i18nKey);
+  }
 };
 </script>
 

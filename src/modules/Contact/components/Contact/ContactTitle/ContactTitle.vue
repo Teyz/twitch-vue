@@ -3,7 +3,7 @@
     <div class="contactTitleMain">
       <h1>{{ title }}</h1>
       <h3>
-        {{ text }}
+        {{ $t('contact.text') }}
       </h3>
     </div>
   </div>
