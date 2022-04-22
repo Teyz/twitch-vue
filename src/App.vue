@@ -5,9 +5,10 @@
         <li>
           <img src="img/logo.svg" alt="" />
         </li>
-        <li><router-link tag="li" to="/">Home</router-link></li>
+        <li><router-link tag="li" to="/">{{ $t("message.home") }}</router-link></li>
         <li><router-link tag="li" to="/contact">Contact</router-link></li>
       </ul>
+      <LocaleSwitcher/>
     </nav>
     <div class="body">
       <router-view />
@@ -17,11 +18,13 @@
 </template>
 
 <script>
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 import Footer from "@/components/Footer";
 export default {
   name: "App",
   components: {
     Footer,
+    LocaleSwitcher
   },
   watch: {
     $route(to, from) {
@@ -45,6 +48,9 @@ export default {
       width: 100vw;
       height: 50px;
       background-color: $secondary-color;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       ul {
         display: flex;

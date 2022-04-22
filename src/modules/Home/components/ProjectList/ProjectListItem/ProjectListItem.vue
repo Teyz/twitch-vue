@@ -5,7 +5,7 @@
     </div>
     <div class="projectContent">
       <h4>
-        <router-link tag="li" :to="link">{{ text }}</router-link>
+        <router-link tag="li" :to="link">{{ $t(`${i18nKey}.projectText`) }}</router-link>
       </h4>
       <div class="projectLink">
         <router-link class="btn secondary" tag="li" :to="link"
@@ -32,6 +32,10 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: "gotaga"
+    }
   },
 };
 </script>

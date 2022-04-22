@@ -1,7 +1,7 @@
 <template>
   <section class="ourClientsRoot">
     <div class="container">
-      <Title title="Clients who trust me" />
+      <Title title="Clients who trust me" i18nKey="client"/>
       <div class="clientsSlider">
         <ul class="clientSliderList">
           <li v-for="item in listItem" :key="item.link">

@@ -1,7 +1,7 @@
 <template>
   <div class="textColumnRoot">
-    <h3>{{ title }}</h3>
-    <p>{{ text }}</p>
+    <h3>{{ $t("message.singleProjectTitle") }}</h3>
+    <p>{{ $t("message.singleProjectText") }}</p>
   </div>
 </template>
 

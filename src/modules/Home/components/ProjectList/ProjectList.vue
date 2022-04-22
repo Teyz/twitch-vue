@@ -11,6 +11,7 @@
             :img="project.src"
             :link="project.link"
             :text="project.text"
+            :i18nKey="project.key"
           />
         </li>
       </ul>

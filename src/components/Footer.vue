@@ -2,10 +2,10 @@
   <footer>
     <div class="footerTopNav">
       <ul>
-        <li><router-link tag="li" to="/">Home</router-link></li>
+        <li><router-link tag="li" to="/">{{ $t("footer.home") }}</router-link></li>
         <li><router-link tag="li" to="/contact">Contact</router-link></li>
         <li>
-          <router-link tag="li" to="/terms">Terms of service</router-link>
+          <router-link tag="li" to="/terms">{{ $t("footer.terms") }}</router-link>
         </li>
       </ul>
       <div class="socialIcons">

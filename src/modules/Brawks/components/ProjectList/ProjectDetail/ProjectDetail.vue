@@ -24,11 +24,11 @@
       </div>
       <div class="projectMain">
         <video v-if="index === 0" autoplay width="300" loop>
-          <source src="media/Hardzone.mp4" type="video/mp4" />
+          <source src="media/Hardzone.webm" type="video/mp4" />
         </video>
         <div v-if="index === 1" class="videoContainer">
           <video autoplay width="300" loop>
-            <source src="media/Wheel.mp4" type="video/mp4" />
+            <source src="media/Wheel.webm" type="video/mp4" />
           </video>
         </div>
         <div v-if="index === 2" class="projectApiContainer">

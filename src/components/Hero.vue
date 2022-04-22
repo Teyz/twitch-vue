@@ -1,8 +1,8 @@
 <template>
   <section class="heroRoot">
     <div class="container">
-      <h1>{{ title }}</h1>
-      <h3>{{ text }}</h3>
+      <h1>{{ $t("message.heroTitle") }}</h1>
+      <h3>{{ $t("message.heroText") }}</h3>
     </div>
   </section>
 </template>
