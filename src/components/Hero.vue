@@ -21,7 +21,7 @@ export default {
     },
     i18nKey: {
       type: String,
-      default: "gotaga"
+      default: "message"
     }
   },
 };
