@@ -14,13 +14,13 @@
         <h3>{{ name }}</h3>
         <h4 v-if="concept">Concept</h4>
         <p>
-          {{ concept }}
+          {{ $t(`${i18nKey}.concept`) }}
         </p>
-        <h4>Development</h4>
+        <h4>{{ $t(`utils.developpment`) }}</h4>
         <p>
-          {{ description }}
+          {{ $t(`${i18nKey}.description`) }}
         </p>
-        <a :href="link" class="btn light" target="_blank">Show on Twitch</a>
+        <a :href="link" class="btn light" target="_blank">{{ $t(`utils.show`) }}</a>
       </div>
       <div class="projectMain">
         <div class="webcamRoot">
@@ -77,6 +77,10 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: ""
+    }
   },
   setup(props) {
     const formatedTags = computed(() => props.tags.split(", "));

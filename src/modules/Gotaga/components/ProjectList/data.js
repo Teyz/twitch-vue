@@ -1,5 +1,6 @@
 export default [
   {
+    "key": "gotaga",
     "img": "img/clients/gotaga.webp",
     "size": "big",
     "video": "media/cam_gotaga.webm",

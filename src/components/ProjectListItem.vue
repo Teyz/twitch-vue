@@ -5,9 +5,9 @@
       <div>
         <h4>{{ name }}</h4>
       </div>
-      <div><p class="author">Created by Teyz</p></div>
+      <div><p class="author">{{ $t("utils.created")}}</p></div>
       <div>
-        <p>{{ description }}</p>
+        <p>{{ $t(`${i18nKey}.description`) }}</p>
       </div>
       <div class="tags">
         <div class="tag" v-for="tag in tags" :key="tag">{{ tag }}</div>
@@ -36,8 +36,13 @@ export default {
       type: String,
       default: "",
     },
+    i18nKey: {
+      type: String,
+      default: ""
+    }
   },
   setup(props) {
+    console.log(props.i18nKey);
     let tags = props.tags;
     tags = tags.split(", ");
     return {
