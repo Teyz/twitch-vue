@@ -8,7 +8,6 @@
         <li><router-link tag="li" to="/">{{ $t("message.home") }}</router-link></li>
         <li><router-link tag="li" to="/contact">Contact</router-link></li>
       </ul>
-      <LocaleSwitcher/>
     </nav>
     <div class="body">
       <router-view />
@@ -18,13 +17,11 @@
 </template>
 
 <script>
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 import Footer from "@/components/Footer";
 export default {
   name: "App",
   components: {
-    Footer,
-    LocaleSwitcher
+    Footer
   },
   watch: {
     $route(to, from) {

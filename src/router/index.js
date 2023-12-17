@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import Contact from '@/pages/Contact.vue';
-import Brawks from '@/pages/Brawks.vue';
-import Gotaga from '@/pages/Gotaga.vue';
 import Terms from '@/pages/Terms.vue';
+import Privacy from '@/pages/Privacy.vue';
 import NotFound from '@/pages/NotFound.vue';
 
 const routes = [
@@ -18,19 +17,14 @@ const routes = [
     component: Contact
   },
   {
-    path: '/brawks',
-    name: 'Brawks',
-    component: Brawks
-  },
-  {
-    path: '/gotaga',
-    name: 'Gotaga',
-    component: Gotaga
-  },
-  {
     path: '/terms',
     name: 'Terms of service',
     component: Terms
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    component: Privacy
   },
   {
     path: "/:catchAll(.*)",

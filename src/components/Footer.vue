@@ -7,6 +7,9 @@
         <li>
           <router-link tag="li" to="/terms">{{ $t("footer.terms") }}</router-link>
         </li>
+        <li>
+          <router-link tag="li" to="/privacy">{{ $t("footer.privacy") }}</router-link>
+        </li>
       </ul>
       <div class="socialIcons">
         <a href="https://www.twitter.com/FrTeyz" target="_blank">

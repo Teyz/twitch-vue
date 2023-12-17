@@ -1,15 +1,8 @@
 <template>
   <section class="singleProjectRoot">
     <div class="container">
-      <div class="videoContent">
-        <video autoplay width="600" loop>
-          <source src="media/Hardzone.webm" type="video/mp4" />
-        </video>
-      </div>
-      <TextColumn
-        title="Bot, website, ..."
-        text="I offer streamers and others custom solutions. From the simple website to the more complex one, but also extensions and Twitch bot."
-      />
+      <img src="/img/tiktok-1.png" alt="" />
+      <img src="/img/tiktok-2.png" alt="" />
     </div>
   </section>
 </template>
@@ -27,10 +20,8 @@ export default {
 .singleProjectRoot {
   width: 100%;
   .container {
-    .videoContent {
-      video {
-        width: 100%;
-      }
+    img {
+      width: 500px;
     }
   }
   @media screen and (min-width: 1024px) {

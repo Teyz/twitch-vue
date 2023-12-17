@@ -12,7 +12,7 @@ import { createI18n } from 'vue-i18n'
 
 const i18n = createI18n({
       // set locale
-    locale: 'fr',
+    locale: 'en',
     // set locale messages
     messages
 })
